@@ -1,1 +1,5 @@
-<Solution />
+<Solution>
+  <Project Path="ObjetosPerdidosUCB.Api/ObjetosPerdidosUCB.Api.csproj" Id="02f94053-378e-4e84-a693-2f874ac20982" />
+  <Project Path="ObjetosPerdidosUCB.Core/ObjetosPerdidosUCB.Core.csproj" Id="f9bfdd04-d368-4c26-9a88-07d7f15ea358" />
+  <Project Path="ObjetosPerdidosUCB.Infrastructure/ObjetosPerdidosUCB.Infrastructure.csproj" Id="ac9fffa6-2b2e-4990-9970-f6cda8b72ac9" />
+</Solution>
