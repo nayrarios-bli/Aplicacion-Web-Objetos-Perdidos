@@ -1,0 +1,22 @@
+# Archivos temporales de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Archivos compilados
+bin/
+obj/
+Debug/
+Release/
+
+# Archivos generados por Visual Studio
+*.cache
+*.pdb
+
+# Archivos de configuración local y secretos
+appsettings.Development.json
+secrets.json
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
