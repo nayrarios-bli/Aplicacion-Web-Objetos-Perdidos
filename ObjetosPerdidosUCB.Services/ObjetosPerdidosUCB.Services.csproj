@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ObjetosPerdidosUCB.Infrastructure\ObjetosPerdidosUCB.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
