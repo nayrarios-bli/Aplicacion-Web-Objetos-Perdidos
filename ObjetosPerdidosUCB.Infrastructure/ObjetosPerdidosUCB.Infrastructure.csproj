@@ -25,8 +25,4 @@
     <ProjectReference Include="..\ObjetosPerdidosUCB.Core\ObjetosPerdidosUCB.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Configurations\" />
-  </ItemGroup>
-
 </Project>

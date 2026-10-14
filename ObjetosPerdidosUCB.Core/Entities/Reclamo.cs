@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ObjetosPerdidosUCB.Api.Data;
+using System;
 using System.Collections.Generic;
 
-namespace ObjetosPerdidosUCB.Api.Data;
+namespace ObjetosPerdidosUCB.Core.Entities;
 
 public partial class Reclamo
 {

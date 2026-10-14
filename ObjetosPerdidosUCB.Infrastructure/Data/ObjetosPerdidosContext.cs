@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using ObjetosPerdidosUCB.Core.Entities;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
 namespace ObjetosPerdidosUCB.Api.Data;
@@ -60,34 +61,6 @@ public partial class ObjetosPerdidosContext : DbContext
                 .HasForeignKey(d => d.IdUsuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_objeto_usuario");
-        });
-
-        modelBuilder.Entity<Reclamo>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity.ToTable("reclamo");
-
-            entity.HasIndex(e => e.IdObjeto, "idx_reclamo_objeto");
-
-            entity.HasIndex(e => e.IdUsuario, "idx_reclamo_usuario");
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.FechaRecogida)
-                .HasColumnType("datetime")
-                .HasColumnName("fechaRecogida");
-            entity.Property(e => e.IdObjeto).HasColumnName("idObjeto");
-            entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-            entity.HasOne(d => d.IdObjetoNavigation).WithMany(p => p.Reclamos)
-                .HasForeignKey(d => d.IdObjeto)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_reclamo_objeto");
-
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Reclamos)
-                .HasForeignKey(d => d.IdUsuario)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_reclamo_usuario");
         });
 
         modelBuilder.Entity<Usuario>(entity =>

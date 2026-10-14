@@ -1,4 +1,7 @@
 
+using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Infrastructure.Repositories;
+
 namespace ObjetosPerdidosUCB.Api
 {
     public class Program
@@ -8,6 +11,7 @@ namespace ObjetosPerdidosUCB.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddTransient<IReclamoRepository, ReclamoRepository>();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

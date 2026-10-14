@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ObjetosPerdidosUCB.Core\ObjetosPerdidosUCB.Core.csproj" />
     <ProjectReference Include="..\ObjetosPerdidosUCB.Infrastructure\ObjetosPerdidosUCB.Infrastructure.csproj" />
+    <ProjectReference Include="..\ObjetosPerdidosUCB.Services\ObjetosPerdidosUCB.Services.csproj" />
   </ItemGroup>
 
 </Project>

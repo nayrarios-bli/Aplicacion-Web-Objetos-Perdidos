@@ -1,8 +1,11 @@
-﻿using ObjetosPerdidosUCB.Api.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ObjetosPerdidosUCB.Infrastructure.Data;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using ObjetosPerdidosUCB.Api.Data;
+using ObjetosPerdidosUCB.Core.Entities;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
@@ -37,7 +40,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             await _objetosPerdidosContext.SaveChangesAsync();
         }
 
-        public async Task UpdatePost(Reclamo reclamo)
+        public async Task UpdateReclamo(Reclamo reclamo)
         {
             _objetosPerdidosContext.Reclamos.Update(reclamo);
             await _objetosPerdidosContext.SaveChangesAsync();

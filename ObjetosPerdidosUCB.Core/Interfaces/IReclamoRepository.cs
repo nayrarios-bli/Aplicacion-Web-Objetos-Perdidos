@@ -1,11 +1,11 @@
-﻿using ObjetosPerdidosUCB.Api.Data;
+﻿using ObjetosPerdidosUCB.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ObjetosPerdidosUCB.Core.Interfaces
 {
-    public class IReclamoRepository
+    public interface IReclamoRepository
     {
         Task<IEnumerable<Reclamo>> GetAllReclamosAsync();
         Task<Reclamo> GetReclamoByIdAsync(int id);
