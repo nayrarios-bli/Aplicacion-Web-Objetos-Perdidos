@@ -6,7 +6,7 @@ namespace ObjetosPerdidosUCB.Api.Data;
 public partial class Reclamo
 {
     public uint Id { get; set; }
-
+    
     public DateTime? FechaRecogida { get; set; }
 
     public uint IdUsuario { get; set; }

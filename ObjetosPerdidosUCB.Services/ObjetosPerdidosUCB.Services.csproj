@@ -10,4 +10,8 @@
     <ProjectReference Include="..\ObjetosPerdidosUCB.Infrastructure\ObjetosPerdidosUCB.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
 </Project>
