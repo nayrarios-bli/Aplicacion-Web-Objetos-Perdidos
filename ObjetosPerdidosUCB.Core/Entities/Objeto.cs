@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ObjetosPerdidosUCB.Core.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace ObjetosPerdidosUCB.Api.Data;
