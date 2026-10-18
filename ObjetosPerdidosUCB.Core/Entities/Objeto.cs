@@ -1,8 +1,7 @@
-﻿using ObjetosPerdidosUCB.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ObjetosPerdidosUCB.Api.Data;
+namespace ObjetosPerdidosUCB.Core.Entities;
 
 public partial class Objeto
 {
@@ -14,17 +13,19 @@ public partial class Objeto
 
     public string Imagen { get; set; } = null!;
 
-    public string LugarEncontrado { get; set; } = null!;
-
-    public DateOnly FechaEncontrada { get; set; }
-
     public string Descripcion { get; set; } = null!;
 
     public bool? Estado { get; set; }
 
     public uint IdUsuario { get; set; }
 
+    public int IddetalleObjeto { get; set; }
+
+    public virtual ICollection<Detalleobjeto> Detalleobjetos { get; set; } = new List<Detalleobjeto>();
+
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+
+    public virtual Detalleobjeto IddetalleObjetoNavigation { get; set; } = null!;
 
     public virtual ICollection<Reclamo> Reclamos { get; set; } = new List<Reclamo>();
 }

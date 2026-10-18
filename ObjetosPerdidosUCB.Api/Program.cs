@@ -1,5 +1,8 @@
 
+
+
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Infrastructure.Mappings;
 using ObjetosPerdidosUCB.Infrastructure.Repositories;
 
 namespace ObjetosPerdidosUCB.Api
@@ -16,6 +19,13 @@ namespace ObjetosPerdidosUCB.Api
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+
+            builder.Services.AddAutoMapper(typeof(ReclamoProfile).Assembly);
+
+            //RegistrarValidators de FluentValidator
+            builder.Services.AddScoped<ReclamoDtoValidator>();
+            builder.Services.AddScoped<CrearReclamoDtoValidator>();
+            builder.Services.AddScoped<ActualizarReclamoDtoValidator>();
 
             var app = builder.Build();
 

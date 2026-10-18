@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ObjetosPerdidosUCB.Infrastructure\ObjetosPerdidosUCB.Infrastructure.csproj" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Validators\" />
+    <ProjectReference Include="..\ObjetosPerdidosUCB.Infrastructure\ObjetosPerdidosUCB.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

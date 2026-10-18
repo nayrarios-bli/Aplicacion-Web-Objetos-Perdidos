@@ -1,15 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ObjetosPerdidosUCB.Infrastructure.Data;
+﻿using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
+
+using ObjetosPerdidosUCB.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ObjetosPerdidosUCB.Api.Data;
-using ObjetosPerdidosUCB.Core.Entities;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
-    public class ReclamoRepository: IReclamoRepository
+    public class ReclamoRepository : IReclamoRepository
     {
         private readonly ObjetosPerdidosContext _objetosPerdidosContext;
         public ReclamoRepository(ObjetosPerdidosContext objetosPerdidosContext)

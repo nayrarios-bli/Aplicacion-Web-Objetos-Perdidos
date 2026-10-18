@@ -1,8 +1,7 @@
-﻿using ObjetosPerdidosUCB.Core.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ObjetosPerdidosUCB.Api.Data;
+namespace ObjetosPerdidosUCB.Core.Entities;
 
 public partial class Usuario
 {
