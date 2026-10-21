@@ -29,7 +29,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             _actualizarValidator = actualizarValidator;
         }
 
-        [HttpGet]
+        [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetUsuarios()
         {
             var usuarios = await _usuarioRepository.GetAllUsuariosAsync();
@@ -37,7 +37,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             return Ok(new ApiResponse<IEnumerable<UsuarioDto>>(usuariosDto));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetUsuarioById(uint id)
         {
             var usuario = await _usuarioRepository.GetUsuarioByIdAsync(id);
@@ -47,7 +47,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             return Ok(new ApiResponse<UsuarioDto>(_mapper.Map<UsuarioDto>(usuario)));
         }
 
-        [HttpPost]
+        [HttpPost("dto/mapper/")]
         public async Task<IActionResult> InsertUsuario([FromBody] CrearUsuarioDto usuarioDto)
         {
             var validationResult = await _crearValidator.ValidateAsync(usuarioDto);
@@ -75,7 +75,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("dto/mapper/{id}")]
         public async Task<IActionResult> UpdateUsuario(uint id, [FromBody] UsuarioDto usuarioDto)
         {
             if (id != usuarioDto.Id)
@@ -109,7 +109,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         /// Baja lógica: el usuario tiene objetos y reclamos asociados (FK), por lo que
         /// se desactiva (Estado = false) en vez de borrarse.
         /// </summary>
-        [HttpDelete("{id}")]
+        [HttpDelete("dto/mapper/{id}")]
         public async Task<IActionResult> DeactivateUsuario(uint id)
         {
             var usuario = await _usuarioRepository.GetUsuarioByIdAsync(id);

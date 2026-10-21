@@ -20,7 +20,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         }
 
         /// <summary>Lista las categorías (para llenar el filtro del catálogo y el formulario de CU-02).</summary>
-        [HttpGet]
+        [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetCategorias([FromQuery] bool soloActivas = true)
         {
             var categorias = await _categoriaRepository.GetAllCategoriasAsync(soloActivas);
@@ -28,7 +28,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             return Ok(new ApiResponse<IEnumerable<CategoriaDto>>(categoriasDto));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetCategoriaById(uint id)
         {
             var categoria = await _categoriaRepository.GetCategoriaByIdAsync(id);

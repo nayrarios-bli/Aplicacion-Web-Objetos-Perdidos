@@ -39,7 +39,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         /// CU-03 Buscar objetos (y CU-06 filtrar por lugar de almacenamiento).
         /// Ejemplo: GET api/Objeto?texto=laptop&amp;idCategoria=1&amp;soloDisponibles=true
         /// </summary>
-        [HttpGet]
+        [HttpGet("dto/mapper/buscar")]
         public async Task<IActionResult> BuscarObjetos(
             [FromQuery] string? texto,
             [FromQuery] uint? idCategoria,
@@ -65,9 +65,22 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 return StatusCode(500, new { message = "Error al consultar los objetos", error = ex.Message });
             }
         }
+        [HttpGet("dto/mapper")]
+
+        public async Task<IActionResult> GetObjetoDtoMapper()
+        {
+            var objetos = await _objetoRepository.GetAllObjetosAsync();
+            var objetoDto = _mapper.Map<IEnumerable<ObjetoDto>>(objetos);
+           
+
+            var response = new ApiResponse
+                <IEnumerable<ObjetoDto>>(objetoDto);
+
+            return Ok(response);
+        }
 
         /// <summary>CU-05 Consultar detalle del objeto.</summary>
-        [HttpGet("{id}")]
+        [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetObjetoById(uint id)
         {
             if (id == 0)
@@ -88,7 +101,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         }
 
         /// <summary>CU-02 Registrar objeto encontrado.</summary>
-        [HttpPost]
+        [HttpPost("dto/mapper/")]
         public async Task<IActionResult> InsertObjeto([FromBody] CrearObjetoDto objetoDto)
         {
             var validationResult = await _crearValidator.ValidateAsync(objetoDto);

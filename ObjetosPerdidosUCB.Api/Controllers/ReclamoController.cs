@@ -32,7 +32,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             _crearValidator = crearValidator;
         }
 
-        [HttpGet]
+        [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetReclamos()
         {
             var reclamos = await _reclamoRepository.GetAllReclamosAsync();
@@ -40,7 +40,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             return Ok(new ApiResponse<IEnumerable<ReclamoDto>>(reclamosDto));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetReclamoById(uint id)
         {
             var reclamo = await _reclamoRepository.GetReclamoByIdAsync(id);
@@ -51,7 +51,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         }
 
         /// <summary>CU-07 Registrar reclamo (queda en estado "pendiente").</summary>
-        [HttpPost]
+        [HttpPost("dto/mapper/")]
         public async Task<IActionResult> InsertReclamo([FromBody] CrearReclamoDto reclamoDto)
         {
             var validationResult = await _crearValidator.ValidateAsync(reclamoDto);

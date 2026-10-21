@@ -14,6 +14,11 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             _context = context;
         }
 
+        public async Task<IEnumerable<Objeto>> GetAllObjetosAsync()
+        {
+            var objetos = await _context.Objetos.ToListAsync();
+            return objetos;
+        }
         public async Task<IEnumerable<Objeto>> SearchObjetosAsync(
             string? texto,
             uint? idCategoria,
@@ -78,5 +83,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             _context.Objetos.Add(objeto);
             await _context.SaveChangesAsync();
         }
+
+        
     }
 }

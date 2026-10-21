@@ -20,7 +20,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         }
 
         /// <summary>Lista los lugares de almacenamiento (CU-02 y CU-06).</summary>
-        [HttpGet]
+        [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetLugares([FromQuery] bool soloActivos = true)
         {
             var lugares = await _lugarRepository.GetAllLugaresAsync(soloActivos);
@@ -28,7 +28,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             return Ok(new ApiResponse<IEnumerable<LugarAlmacenamientoDto>>(lugaresDto));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetLugarById(uint id)
         {
             var lugar = await _lugarRepository.GetLugarByIdAsync(id);

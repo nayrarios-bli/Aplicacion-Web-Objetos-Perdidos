@@ -10,7 +10,9 @@ namespace ObjetosPerdidosUCB.Core.Interfaces
             uint? idLugarAlmacenamiento,
             string? lugarEncontrado,
             bool? soloDisponibles);
-        Task<Objeto?> GetObjetoByIdAsync(uint id);
+        Task<Objeto> GetObjetoByIdAsync(uint id);
+
+        Task<IEnumerable<Objeto>> GetAllObjetosAsync();
         Task<bool> ExistsCodigoAsync(string codigo);
         Task InsertObjeto(Objeto objeto);
     }
