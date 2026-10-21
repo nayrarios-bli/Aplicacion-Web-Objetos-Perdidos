@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\objetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\objetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -103,10 +107,6 @@
       "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\detalleobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\configurations\\objetoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\configurations\\objetoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -162,11 +162,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 36,
+          "SelectedChildIndex": 31,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ObjetoDto.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
@@ -175,138 +175,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-13T23:43:25.089Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IObjetoRepository.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T14:08:50.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ObjetoRepository.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBoAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T14:06:35.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ActualizarObjetoDtoValidator.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T13:38:50.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CrearObjetoDtoValidator.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAqwA8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T13:38:24.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ActualizarDetalleObjetoDtoValidator.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA5wCkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T13:36:28.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CrearDetalleObjetoDtoValidator.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T13:35:58.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetalleObjetoDtoValidator.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T13:30:26.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ObjetoDtoValidator.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T13:18:33.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ApiResponse.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T11:56:19.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ObjetosPerdidosUCB.Services",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-21T11:13:39.156Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -330,7 +199,127 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IObjetoRepository.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T14:08:50.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ObjetoRepository.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBoAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T14:06:35.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ActualizarObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:38:50.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CrearObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:38:24.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ActualizarDetalleObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA5wCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:36:28.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CrearDetalleObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:35:58.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetalleObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:30:26.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:18:33.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T11:56:19.801Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 23,
+              "Title": "ObjetosPerdidosUCB.Services.csproj",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-21T11:13:39.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\WeatherForecastController.cs",
@@ -342,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Class1.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Class1.cs",
@@ -350,12 +339,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:32:17.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:32:17.881Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "DetalleobjetoRepository.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\DetalleobjetoRepository.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\DetalleobjetoRepository.cs",
@@ -367,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IDetalleobjetoRepository.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
@@ -375,12 +363,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:28:34.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:28:34.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DetalleobjetoController.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
@@ -388,12 +375,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAswHUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:27:56.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:27:56.92Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DetalleobjetoProfile.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
@@ -401,12 +387,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:25:11.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:25:11.272Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "DetalleobjetoDto.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
@@ -414,12 +399,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:23:26.093Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:23:26.093Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ObjetosPerdidosUCB.Api.csproj",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
@@ -427,12 +411,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-20T04:19:43.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:19:43.032Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DetalleobjetoConfiguration.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
@@ -440,8 +423,7 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:09:30.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:09:30.124Z"
             },
             {
               "$type": "Document",
@@ -469,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Objeto.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
@@ -477,12 +459,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:07:41.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:07:41.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Detalleobjeto.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
@@ -490,12 +471,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:07:19.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:07:19.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ObjetoPerdidosContext.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
@@ -503,8 +483,7 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-20T04:06:21.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-20T04:06:21.491Z"
             },
             {
               "$type": "Document",
@@ -520,19 +499,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Program.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAhwBEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACEAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:03:52.025Z"
+              "WhenOpened": "2026-10-14T02:03:52.025Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ObjetoProfile.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
@@ -540,8 +520,7 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAASwBIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:33:15.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T01:33:15.04Z"
             },
             {
               "$type": "Document",
@@ -581,13 +560,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ObjetoController.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAuwJIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAuwJcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T01:01:55.051Z",
               "EditorCaption": ""

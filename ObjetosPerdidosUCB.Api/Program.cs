@@ -4,6 +4,7 @@ using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Infrastructure.Data;
 using ObjetosPerdidosUCB.Infrastructure.Mapping;
 using ObjetosPerdidosUCB.Infrastructure.Repositories;
+using ObjetosPerdidosUCB.Services.Validators;
 
 namespace ObjetosPerdidosUCB.Api
 {
@@ -19,10 +20,20 @@ namespace ObjetosPerdidosUCB.Api
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
             #endregion
             builder.Services.AddTransient<IObjetoRepository, ObjetoRepository>();
+            builder.Services.AddTransient<IDetalleobjetoRepository, DetalleobjetoRepository>();
+
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
             builder.Services.AddAutoMapper(typeof(ObjetoProfile).Assembly);
+            builder.Services.AddAutoMapper(typeof(DetalleobjetoProfile).Assembly);
+
+            builder.Services.AddScoped<ObjetoDtoValidator>();
+            builder.Services.AddScoped<ActualizarObjetoDtoValidator>();
+            builder.Services.AddScoped<CrearObjetoDtoValidator>();
+            builder.Services.AddScoped<DetalleobjetoDtoValidator>();
+            builder.Services.AddScoped<ActualizarDetalleobjetoDtoValidator>();
+            builder.Services.AddScoped<CrearDetalleobjetoDtoValidator>();
 
             var app = builder.Build();
 
