@@ -11,8 +11,12 @@ namespace ObjetosPerdidosUCB.Infrastructure.Mapping
     {
         public ObjetoProfile()
         {
-            CreateMap<Objeto, ObjetoDto>();
-            CreateMap<ObjetoDto, Objeto>();
+            CreateMap<Objeto, ObjetoDto>()
+                 .ForMember(dest => dest.Imagen,
+                 opt => opt.MapFrom(src => src.Image));
+            CreateMap<ObjetoDto, Objeto>()
+                .ForMember(dest => dest.Image,
+                opt => opt.MapFrom(src => src.Imagen));
         }
     }
 }

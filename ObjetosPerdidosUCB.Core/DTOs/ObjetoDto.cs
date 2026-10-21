@@ -14,15 +14,13 @@ namespace ObjetosPerdidosUCB.Core.DTOs
 
         public string Imagen { get; set; } = null!;
 
-        public string LugarEncontrado { get; set; } = null!;
-
-        public DateOnly FechaEncontrada { get; set; }
-
         public string Descripcion { get; set; } = null!;
 
         public bool? Estado { get; set; }
 
         public uint IdUsuario { get; set; }
+
+        public int IddetalleObjeto { get; set; }
 
     }
 }

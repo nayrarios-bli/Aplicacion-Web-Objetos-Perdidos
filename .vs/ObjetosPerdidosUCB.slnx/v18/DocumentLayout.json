@@ -7,40 +7,124 @@
       "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\objetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\detalleobjetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\detalleobjetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\detalleobjeto\\detalleobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\detalleobjeto\\detalleobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\detalleobjeto\\creardetalleobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\detalleobjeto\\creardetalleobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\detalleobjeto\\actualizardetalleobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\detalleobjeto\\actualizardetalleobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\iobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\iobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\idetalleobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\idetalleobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\objetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\objetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\objetosperdidosucb.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\objetosperdidosucb.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\objeto\\crearobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\objeto\\crearobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\objetosperdidosucb.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\objetosperdidosucb.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\objeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\objeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\dtos\\detalleobjetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\dtos\\detalleobjetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\objetosperdidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\objetosperdidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\detalleobjeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\detalleobjeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\objeto\\actualizarobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\objeto\\actualizarobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\objeto\\objetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\objeto\\objetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\configurations\\detalleobjetoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\configurations\\detalleobjetoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\objetoperdidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\objetoperdidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\mapping\\detalleobjetoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\mapping\\detalleobjetoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\mapping\\objetoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\mapping\\objetoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\configurations\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\configurations\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\objetosperdidosucb.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\objetosperdidosucb.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\objetosperdidosucb.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{725B422F-9C69-4855-9AEB-333C5A877E76}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\objetosperdidosucb.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\detalleobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\detalleobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\configurations\\objetoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\configurations\\objetoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\configurations\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\configurations\\usuarioconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\objetosperdidosucb.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\objetosperdidosucb.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\configurations\\reclamoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,6 +139,10 @@
       "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\reclamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\objetosperdidosucb.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\objetosperdidosucb.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,31 +151,163 @@
       "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\objetosperdidosucb.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Data\\ObjetosPerdidosContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ObjetosPerdidosUCB.Api\\Data\\ObjetosPerdidosContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\gabriela\\universidad catolica\\4to semestre\\tecnologias web 1\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 186,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 36,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ObjetoDto.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T23:43:25.089Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IObjetoRepository.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T14:08:50.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ObjetoRepository.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBoAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T14:06:35.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ActualizarObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ActualizarObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:38:50.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CrearObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\CrearObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:38:24.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActualizarDetalleObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\ActualizarDetalleObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA5wCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:36:28.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CrearDetalleObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\CrearDetalleObjetoDtoValidator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:35:58.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetalleObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\DetalleObjeto\\DetalleObjetoDtoValidator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:30:26.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ObjetoDtoValidator.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Objeto\\ObjetoDtoValidator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T13:18:33.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Response\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T11:56:19.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ObjetosPerdidosUCB.Services",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-21T11:13:39.156Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -110,7 +330,185 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 23,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T02:19:23.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Class1.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Class1.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Class1.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:32:17.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DetalleobjetoRepository.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\DetalleobjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\DetalleobjetoRepository.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\DetalleobjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\DetalleobjetoRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwCgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:29:02.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDetalleobjetoRepository.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IDetalleobjetoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:28:34.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetalleobjetoController.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\DetalleobjetoController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAswHUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:27:56.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DetalleobjetoProfile.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\DetalleobjetoProfile.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:25:11.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetalleobjetoDto.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\DTOs\\DetalleobjetoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:23:26.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ObjetosPerdidosUCB.Api.csproj",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-20T04:19:43.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DetalleobjetoConfiguration.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\DetalleobjetoConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:09:30.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:07:53.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Reclamo.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:07:47.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Objeto.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:07:41.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Detalleobjeto.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Detalleobjeto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:07:19.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ObjetoPerdidosContext.cs",
+              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
+              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetoPerdidosContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:06:21.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "ObjetosPerdidosUCB.Api.http",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.http",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.http",
@@ -118,99 +516,68 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-10-14T02:09:00.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T02:09:00.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Program.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAhwBEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T02:03:52.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T02:03:52.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "ObjetoProfile.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Mapping\\ObjetoProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAASwBIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T01:33:15.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ObjetoRepository.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAA8wCwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:19:23.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 28,
               "Title": "UsuarioConfiguration.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\UsuarioConfiguration.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\UsuarioConfiguration.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\UsuarioConfiguration.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\UsuarioConfiguration.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAowBoAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:16:09.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T01:16:09.133Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 31,
               "Title": "ReclamoConfiguration.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ReclamoConfiguration.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ReclamoConfiguration.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ReclamoConfiguration.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ReclamoConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwCcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAC0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:13:57.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T01:13:57.767Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ObjetosPerdidosContext.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetosPerdidosContext.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetosPerdidosContext.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetosPerdidosContext.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetosPerdidosContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:08:21.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 26,
               "Title": "ObjetoConfiguration.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ObjetoConfiguration.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ObjetoConfiguration.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ObjetoConfiguration.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\Configurations\\ObjetoConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T01:08:20.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T01:08:20.114Z"
             },
             {
               "$type": "Document",
@@ -220,79 +587,26 @@
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwEEAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAuwJIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-14T01:01:55.051Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T00:59:11.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Reclamo.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Reclamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T00:59:07.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IObjetoRepository.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAvwBQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T00:52:26.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ObjetoDto.cs",
-              "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-13T23:43:25.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ObjetosPerdidosUCB.Core",
+              "DocumentIndex": 36,
+              "Title": "ObjetosPerdidosUCB.Core.csproj",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj",
               "ToolTip": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj",
               "RelativeToolTip": "ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-13T23:41:13.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-13T23:41:13.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 29,
               "Title": "ObjetosPerdidosUCB.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj",
@@ -300,12 +614,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-13T22:49:51.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-13T22:49:51.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 37,
               "Title": "ObjetosPerdidosContext.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Data\\ObjetosPerdidosContext.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Data\\ObjetosPerdidosContext.cs",
@@ -317,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\appsettings.json",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\appsettings.json",
@@ -329,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 35,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Class1.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Class1.cs",
@@ -337,12 +650,11 @@
               "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-13T21:43:58.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-13T21:43:58.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Gabriela\\Universidad Catolica\\4to semestre\\tecnologias web 1\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Class1.cs",

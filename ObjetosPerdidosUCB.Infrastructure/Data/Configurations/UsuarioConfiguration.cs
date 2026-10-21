@@ -9,7 +9,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Data.Configurations
 {
     public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
     {
-        public void Configure(EntityTypeBuilder<Usuario> entity)
+       public void Configure(EntityTypeBuilder<Usuario> entity)
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 

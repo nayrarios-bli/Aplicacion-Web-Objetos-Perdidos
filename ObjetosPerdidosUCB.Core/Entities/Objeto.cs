@@ -11,11 +11,7 @@ public partial class Objeto
 
     public string Nombre { get; set; } = null!;
 
-    public string Imagen { get; set; } = null!;
-
-    public string LugarEncontrado { get; set; } = null!;
-
-    public DateOnly FechaEncontrada { get; set; }
+    public string Image { get; set; } = null!;
 
     public string Descripcion { get; set; } = null!;
 
@@ -23,7 +19,13 @@ public partial class Objeto
 
     public uint IdUsuario { get; set; }
 
+    public int IddetalleObjeto { get; set; }
+
+    public virtual ICollection<Detalleobjeto> Detalleobjetos { get; set; } = new List<Detalleobjeto>();
+
     public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+
+    public virtual Detalleobjeto IddetalleObjetoNavigation { get; set; } = null!;
 
     public virtual ICollection<Reclamo> Reclamos { get; set; } = new List<Reclamo>();
 }

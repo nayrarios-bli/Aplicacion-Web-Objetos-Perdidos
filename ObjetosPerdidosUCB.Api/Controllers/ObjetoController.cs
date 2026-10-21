@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using ObjetosPerdidosUCB.Api.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using ObjetosPerdidosUCB.Infrastructure.Repositories;
+using ObjetosPerdidosUCB.Services.Validators;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
@@ -15,110 +15,21 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     {
         private readonly IObjetoRepository _objetoRepository;
         private readonly IMapper _mapper;
-        public ObjetoController(IMapper mapper, IObjetoRepository objetoRepository)
+        private readonly IDetalleobjetoRepository _detalleobjetoRepository;
+        private readonly CrearObjetoDtoValidator _crearValidator;
+
+        private readonly ActualizarObjetoDtoValidator _actualizaValidator;
+        public ObjetoController(IMapper mapper, IObjetoRepository objetoRepository,
+            CrearObjetoDtoValidator crearValidator, ActualizarObjetoDtoValidator actualizaValidator,
+            IDetalleobjetoRepository detalleobjetoRepository)
         {
             _objetoRepository = objetoRepository;
             _mapper = mapper;
+            _detalleobjetoRepository = detalleobjetoRepository;
+            _crearValidator = crearValidator;
+            _actualizaValidator = actualizaValidator;
         }
-        #region con Dto
-        [HttpGet("dto")]
-        public async Task<IActionResult> GetObjetosDto()
-        {
-            var objetos = await _objetoRepository.GetAllObjetosAsync();
-            var objetosDtos = objetos.Select(o => new ObjetoDto
-            {
-                Id = o.Id,
-                Codigo = o.Codigo,
-                Nombre = o.Nombre,
-                Imagen = o.Imagen,
-                LugarEncontrado = o.LugarEncontrado,
-                FechaEncontrada = o.FechaEncontrada,
-                Descripcion = o.Descripcion,
-                Estado = o.Estado,
-                IdUsuario = o.IdUsuario
-            });
-            return Ok(objetosDtos);
-        }
-
-        [HttpGet("dto/{nombre}")]
-
-        public async Task<IActionResult> GetObjetoByNombre(string nombre)
-        {
-            var objeto = await _objetoRepository.GetObjetoByNombreAsync(nombre);
-            var objetoDto = new ObjetoDto
-            {
-                Id = objeto.Id,
-                Codigo = objeto.Codigo,
-                Nombre = objeto.Nombre,
-                Imagen = objeto.Imagen,
-                LugarEncontrado = objeto.LugarEncontrado,
-                FechaEncontrada = objeto.FechaEncontrada,
-                Descripcion = objeto.Descripcion,
-                Estado = objeto.Estado,
-                IdUsuario = objeto.IdUsuario
-            };
-            return Ok(objeto);
-        }
-
-        [HttpPost("dto")]
-        public async Task<IActionResult> InsertObjetoDto(ObjetoDto newObjeto)
-        {
-            var objeto = new Objeto
-            {
-                Id = newObjeto.Id,
-                Codigo = newObjeto.Codigo,
-                Nombre = newObjeto.Nombre,
-                Imagen = newObjeto.Imagen,
-                LugarEncontrado = newObjeto.LugarEncontrado,
-                FechaEncontrada = newObjeto.FechaEncontrada,
-                Descripcion = newObjeto.Descripcion,
-                Estado = newObjeto.Estado,
-                IdUsuario = newObjeto.IdUsuario
-            };
-            await _objetoRepository.InsertObjeto(objeto);
-            return Created($"api/comment/{newObjeto.Id}", newObjeto);
-        }
-
-        [HttpPut("dto")]
-        public async Task<IActionResult> UpdateObjetoDto(string nombre, [FromBody] ObjetoDto objetoDto)
-        {
-            if (nombre != objetoDto.Nombre)
-            {
-                return BadRequest("El nombre del Objeto no coincide");
-            }
-            var objeto = await _objetoRepository.GetObjetoByNombreAsync(nombre);
-
-            if (objeto == null)
-                return NotFound("objeto no encontrado");
-
-            objeto.Id = objetoDto.Id;
-            objeto.Codigo = objetoDto.Codigo;
-            objeto.Nombre = objetoDto.Nombre;
-            objeto.Imagen = objetoDto.Imagen;
-            objeto.LugarEncontrado = objetoDto.LugarEncontrado;
-            objeto.FechaEncontrada = objetoDto.FechaEncontrada;
-            objeto.Descripcion = objetoDto.Descripcion;
-            objeto.Estado = objetoDto.Estado;
-            objeto.IdUsuario = objetoDto.IdUsuario;
-
-
-            await _objetoRepository.UpdateObjeto(objeto);
-            return NoContent();
-        }
-
-        [HttpDelete("dto/{id}")]
-        public async Task<IActionResult> DeleteObjetoDto(string nombre)
-        {
-            var objeto = await _objetoRepository.GetObjetoByNombreAsync(nombre);
-            if (objeto == null)
-                return NotFound("Objeto no encontrado.");
-
-            await _objetoRepository.DeleteObjeto(objeto);
-
-            return NoContent(); 
-        }
-        #endregion
-
+        
         #region Mapper
         [HttpGet("dto/mapper")]
 
@@ -135,6 +46,131 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             var objeto = await _objetoRepository.GetObjetoByNombreAsync(nombre);
             var objetosDto = _mapper.Map<ObjetoDto>(objeto);
             return Ok(objeto);
+        }
+
+        [HttpGet("dto/mapper/buscar")]
+        public async Task<IActionResult> BuscarObjetosDtoMapper([FromQuery] string? nombre)
+        {
+            try
+            {
+                var objetos = await _objetoRepository.GetAllObjetosAsync();
+
+                if (!string.IsNullOrWhiteSpace(nombre))
+                    objetos = objetos.Where(o => o.Nombre.Contains(nombre.Trim(),
+                                                 StringComparison.OrdinalIgnoreCase));
+
+                var objetosDto = _mapper.Map<IEnumerable<ObjetoDto>>(objetos);
+                var response = new ApiResponse
+                    <IEnumerable<ObjetoDto>>(objetosDto);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al buscar los objetos", error = ex.Message });
+            }
+        }
+
+        [HttpPost("dto/mapper/")]
+        public async Task<IActionResult> InsertObjetoDtoMapper(ObjetoDto objetoDto)
+        {
+            var validationResult = await _crearValidator.ValidateAsync(objetoDto);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(new
+                {
+                    message = "Error de validación",
+                    errors = validationResult.Errors.Select(e => new
+                    {
+                        field = e.PropertyName,
+                        error = e.ErrorMessage
+                    })
+                });
+            }
+
+            // Verificar que el detalle exista, si no la FK daría un error 500
+            var detalle = await _detalleobjetoRepository.GetDetalleobjetoByIdAsync(objetoDto.IddetalleObjeto);
+            if (detalle == null)
+                return NotFound(new { message = "El detalle del objeto no existe." });
+
+            try
+            {
+                var objeto = _mapper.Map<Objeto>(objetoDto);
+                await _objetoRepository.InsertObjeto(objeto);
+
+                var resultDto = _mapper.Map<ObjetoDto>(objeto);
+                var response = new ApiResponse
+                    <ObjetoDto>(resultDto);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al crear el objeto", error = ex.Message });
+            }
+        }
+        [HttpPut("dto/mapper/{id}")]
+        public async Task<IActionResult> UpdateObjetoDtoMapper(int id, [FromBody] ObjetoDto objetoDto)
+        {
+            if (id != objetoDto.Id)
+                return BadRequest("El ID del objeto no coincide.");
+
+            var validationResult = await _actualizaValidator.ValidateAsync(objetoDto);
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(new
+                {
+                    message = "Error de validación",
+                    errors = validationResult.Errors.Select(e => new
+                    {
+                        field = e.PropertyName,
+                        error = e.ErrorMessage
+                    })
+                });
+            }
+
+            var objeto = await _objetoRepository.GetObjetoByIdAsync(id);
+            if (objeto == null)
+                return NotFound(new { message = "Objeto no encontrado." });
+
+            // Si cambian el detalle, que el nuevo exista
+            var detalle = await _detalleobjetoRepository.GetDetalleobjetoByIdAsync(objetoDto.IddetalleObjeto);
+            if (detalle == null)
+                return NotFound(new { message = "El detalle del objeto no existe." });
+
+            try
+            {
+                _mapper.Map(objetoDto, objeto);
+                await _objetoRepository.UpdateObjeto(objeto);
+
+                var resultDto = _mapper.Map<ObjetoDto>(objeto);
+                var resopnse = new ApiResponse
+                    <ObjetoDto>(resultDto);
+                return Ok(resopnse);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al actualizar el objeto", error = ex.Message });
+            }
+        }
+
+        [HttpDelete("dto/mapper/{id}")]
+        public async Task<IActionResult> DeleteObjetoDtoMapper(int id)
+        {
+            if (id == 0)
+                return BadRequest(new { message = "El ID debe ser mayor que cero." });
+
+            var objeto = await _objetoRepository.GetObjetoByIdAsync(id);
+            if (objeto == null)
+                return NotFound(new { message = "Objeto no encontrado." });
+
+            try
+            {
+                await _objetoRepository.DeleteObjeto(objeto);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al eliminar el objeto", error = ex.Message });
+            }
         }
         #endregion
     }

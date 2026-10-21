@@ -15,7 +15,7 @@ namespace ObjetosPerdidosUCB.Api
 
             #region COnfigura MySQL
             var connectionString = builder.Configuration.GetConnectionString("ConnectionMySql");
-            builder.Services.AddDbContext<ObjetosPerdidosContext>(options =>
+            builder.Services.AddDbContext<ObjetoPerdidosContext>(options =>
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
             #endregion
             builder.Services.AddTransient<IObjetoRepository, ObjetoRepository>();

@@ -11,6 +11,7 @@ namespace ObjetosPerdidosUCB.Core.Interfaces
     public interface IObjetoRepository
     {
         Task<IEnumerable<Objeto>> GetAllObjetosAsync();
+        Task<Objeto> GetObjetoByIdAsync(int id);
 
         Task<Objeto> GetObjetoByNombreAsync(String nombre);
 

@@ -11,9 +11,9 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
     public class ObjetoRepository : IObjetoRepository
     {
-        private readonly ObjetosPerdidosContext _objetosPerdidosContext;
+        private readonly ObjetoPerdidosContext _objetosPerdidosContext;
 
-        public ObjetoRepository(ObjetosPerdidosContext objetosPerdidosContext)
+        public ObjetoRepository(ObjetoPerdidosContext objetosPerdidosContext)
         {
             _objetosPerdidosContext = objetosPerdidosContext;
         }
@@ -21,6 +21,11 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         {
             var objetos = await _objetosPerdidosContext.Objetos.ToListAsync();
             return objetos;
+        }
+        public async Task<Objeto> GetObjetoByIdAsync(int id)
+        {
+            var objeto = await _objetosPerdidosContext.Objetos.FirstOrDefaultAsync(x => x.Id == id);
+                return objeto;
         }
         public async Task<Objeto> GetObjetoByNombreAsync(string nombre)
         {
