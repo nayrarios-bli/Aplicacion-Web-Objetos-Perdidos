@@ -1,25 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ObjetosPerdidosUCB.Core.Entities;
+﻿namespace ObjetosPerdidosUCB.Core.Entities;
 
 public partial class Detalleobjeto
 {
-    public int Id { get; set; }
-
-    public DateOnly FechaEncontrada { get; set; }
-
-    public DateOnly? FechaRecogida { get; set; }
+    public uint IdObjeto { get; set; }
 
     public string LugarEncontrado { get; set; } = null!;
 
-    public string LugarAlmacenado { get; set; } = null!;
+    public DateOnly FechaEncontrada { get; set; }
 
-    public sbyte DiasGuardados { get; set; }
+    public DateOnly? FechaEntrega { get; set; }
 
-    public uint Idobjeto { get; set; }
+    public string? DetalleVerificacion { get; set; }
 
-    public virtual Objeto IdobjetoNavigation { get; set; } = null!;
+    public uint IdLugarAlmacenamiento { get; set; }
 
-    public virtual ICollection<Objeto> Objetos { get; set; } = new List<Objeto>();
+    public uint IdUsuarioRegistro { get; set; }
+
+    public virtual Objeto IdObjetoNavigation { get; set; } = null!;
+
+    public virtual LugarAlmacenamiento IdLugarAlmacenamientoNavigation { get; set; } = null!;
+
+    public virtual Usuario IdUsuarioRegistroNavigation { get; set; } = null!;
 }

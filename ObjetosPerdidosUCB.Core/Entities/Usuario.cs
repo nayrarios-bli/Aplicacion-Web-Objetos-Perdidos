@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ObjetosPerdidosUCB.Core.Entities;
+﻿namespace ObjetosPerdidosUCB.Core.Entities;
 
 public partial class Usuario
 {
@@ -15,9 +12,11 @@ public partial class Usuario
 
     public string Rol { get; set; } = null!;
 
-    public bool? Estado { get; set; }
+    public bool Estado { get; set; } = true;
 
-    public virtual ICollection<Objeto> Objetos { get; set; } = new List<Objeto>();
+    public virtual ICollection<Detalleobjeto> DetallesRegistrados { get; set; } = new List<Detalleobjeto>();
 
     public virtual ICollection<Reclamo> Reclamos { get; set; } = new List<Reclamo>();
+
+    public virtual ICollection<Reclamo> ReclamosRevisados { get; set; } = new List<Reclamo>();
 }

@@ -1,14 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ObjetosPerdidosUCB.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Data.Configurations
 {
-    internal class ObjetoConfiguration :
-        IEntityTypeConfiguration<Objeto>
+    public class ObjetoConfiguration : IEntityTypeConfiguration<Objeto>
     {
         public void Configure(EntityTypeBuilder<Objeto> entity)
         {
@@ -16,38 +12,23 @@ namespace ObjetosPerdidosUCB.Infrastructure.Data.Configurations
 
             entity.ToTable("objeto");
 
-            entity.HasIndex(e => e.IddetalleObjeto, "fk_objeto_detalleObjeto1_idx");
-
-            entity.HasIndex(e => e.IdUsuario, "idx_objeto_usuario");
-
             entity.HasIndex(e => e.Codigo, "uq_objeto_codigo").IsUnique();
+            entity.HasIndex(e => e.IdCategoria, "idx_objeto_categoria");
 
-            entity.Property(e => e.Id)
-                .HasColumnType("int(10) unsigned")
-                .HasColumnName("id");
-            entity.Property(e => e.Codigo).HasMaxLength(30);
-            entity.Property(e => e.Descripcion).HasColumnType("text");
-            entity.Property(e => e.Estado)
-                .IsRequired()
-                .HasDefaultValueSql("'1'");
-            entity.Property(e => e.IdUsuario)
-                .HasColumnType("int(10) unsigned")
-                .HasColumnName("idUsuario");
-            entity.Property(e => e.IddetalleObjeto)
-                .HasColumnType("int(11)")
-                .HasColumnName("iddetalleObjeto");
-            entity.Property(e => e.Imagen).HasMaxLength(255);
-            entity.Property(e => e.Nombre).HasMaxLength(100);
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Codigo).HasColumnName("codigo").HasMaxLength(30);
+            entity.Property(e => e.Nombre).HasColumnName("nombre").HasMaxLength(100);
+            entity.Property(e => e.Descripcion).HasColumnName("descripcion").HasColumnType("text");
+            entity.Property(e => e.Imagen).HasColumnName("imagen").HasMaxLength(255);
+            entity.Property(e => e.Estado).HasColumnName("estado");
+            entity.Property(e => e.IdCategoria).HasColumnName("idCategoria");
+            // Estado sin HasDefaultValueSql: con un bool, EF trataría "false" como
+            // "sin valor" y no lo enviaría al INSERT (el default de la BD lo volvería true).
 
-            entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Objetos)
-                .HasForeignKey(d => d.IdUsuario)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_objeto_usuario");
-
-            entity.HasOne(d => d.IddetalleObjetoNavigation).WithMany(p => p.Objetos)
-                .HasForeignKey(d => d.IddetalleObjeto)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_objeto_detalleObjeto1");
+            entity.HasOne(d => d.IdCategoriaNavigation).WithMany(p => p.Objetos)
+                .HasForeignKey(d => d.IdCategoria)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasConstraintName("fk_objeto_categoria");
         }
     }
 }
