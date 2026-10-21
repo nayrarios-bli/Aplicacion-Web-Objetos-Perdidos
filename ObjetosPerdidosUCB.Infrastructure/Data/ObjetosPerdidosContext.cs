@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using ObjetosPerdidosUCB.Core.Entities;
 
@@ -12,7 +11,11 @@ public partial class ObjetosPerdidosContext : DbContext
     {
     }
 
+    public virtual DbSet<Categoria> Categorias { get; set; }
+
     public virtual DbSet<Detalleobjeto> Detalleobjetos { get; set; }
+
+    public virtual DbSet<LugarAlmacenamiento> LugaresAlmacenamiento { get; set; }
 
     public virtual DbSet<Objeto> Objetos { get; set; }
 
@@ -26,8 +29,7 @@ public partial class ObjetosPerdidosContext : DbContext
             .UseCollation("utf8mb4_0900_ai_ci")
             .HasCharSet("utf8mb4");
 
-        OnModelCreatingPartial(modelBuilder);
+        // Sin esta línea, las clases *Configuration NO se aplican.
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
