@@ -1,49 +1,44 @@
-﻿using ObjetosPerdidosUCB.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
-
 using ObjetosPerdidosUCB.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
     public class ReclamoRepository : IReclamoRepository
     {
-        private readonly ObjetosPerdidosContext _objetosPerdidosContext;
-        public ReclamoRepository(ObjetosPerdidosContext objetosPerdidosContext)
+        private readonly ObjetosPerdidosContext _context;
+
+        public ReclamoRepository(ObjetosPerdidosContext context)
         {
-            _objetosPerdidosContext = objetosPerdidosContext;
-        }
-        public async Task DeleteReclamo(Reclamo reclamo)
-        {
-            _objetosPerdidosContext.Reclamos.Remove(reclamo);
-            await _objetosPerdidosContext.SaveChangesAsync();
+            _context = context;
         }
 
         public async Task<IEnumerable<Reclamo>> GetAllReclamosAsync()
         {
-            var reclamos = await _objetosPerdidosContext.Reclamos.ToListAsync();
-            return reclamos;
+            return await _context.Reclamos
+                .AsNoTracking()
+                .OrderByDescending(r => r.FechaEmitida)
+                .ToListAsync();
         }
 
-        public async Task<Reclamo> GetReclamoByIdAsync(int id)
+        public async Task<Reclamo?> GetReclamoByIdAsync(uint id)
         {
-            var reclamo = await _objetosPerdidosContext.Reclamos.FirstOrDefaultAsync(x => x.Id == id);
-            return reclamo;
+            return await _context.Reclamos.FirstOrDefaultAsync(r => r.Id == id);
+        }
+
+        public async Task<bool> ExistsPendienteAsync(uint idObjeto, uint idUsuario)
+        {
+            return await _context.Reclamos.AnyAsync(r =>
+                r.IdObjeto == idObjeto &&
+                r.IdUsuario == idUsuario &&
+                r.Estado == "pendiente");
         }
 
         public async Task InsertReclamo(Reclamo reclamo)
         {
-            _objetosPerdidosContext.Reclamos.Add(reclamo);
-            await _objetosPerdidosContext.SaveChangesAsync();
-        }
-
-        public async Task UpdateReclamo(Reclamo reclamo)
-        {
-            _objetosPerdidosContext.Reclamos.Update(reclamo);
-            await _objetosPerdidosContext.SaveChangesAsync();
-
+            _context.Reclamos.Add(reclamo);
+            await _context.SaveChangesAsync();
         }
     }
 }

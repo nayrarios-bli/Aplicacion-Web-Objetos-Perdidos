@@ -3,9 +3,12 @@
     public class ApiResponse<T>
     {
         public T Data { get; set; }
-        public ApiResponse(T data)
+        public string? Message { get; set; }
+
+        public ApiResponse(T data, string? message = null)
         {
             Data = data;
+            Message = message;
         }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Mappings
 {
@@ -12,85 +8,23 @@ namespace ObjetosPerdidosUCB.Infrastructure.Mappings
     {
         public ReclamoProfile()
         {
-            CreateMap<ReclamoProfile, ReclamoDto>(); //.ReverseMap();
-
             CreateMap<Reclamo, ReclamoDto>()
-               .ForMember(dest => dest.FechaEmitida,
-                   opt => opt.ConvertUsing<DateTimeToStringConverter, DateTime>());
-            CreateMap<ReclamoDto, Reclamo>()
-                .ForMember(dest => dest.FechaEmitida,
-                    opt => opt.ConvertUsing<StringToDateTimeConverter, string>());
+                .ForMember(d => d.FechaEmitida,
+                    o => o.ConvertUsing<DateTimeToStringConverter, DateTime>())
+                .ForMember(d => d.FechaRevisada,
+                    o => o.ConvertUsing<NullableDateTimeToStringConverter, DateTime?>());
 
-            CreateMap<Reclamo, ReclamoDto>()
-               .ForMember(dest => dest.FechaRevisada,
-                   opt => opt.ConvertUsing<DateTimeToStringConverter, DateTime>());/*
-            CreateMap<ReclamoDto, Reclamo>()
-                .ForMember(dest => dest.FechaRevisada,
-                    opt => opt.ConvertUsing<StringToDateTimeConverter, string>());*/
-
-        }
-    }
-
-
-    public class DateTimeToStringConverter : IValueConverter<DateTime, string>
-    {
-        public string Convert(DateTime source, ResolutionContext context)
-        {
-            // Por defecto, convertir a formato completo sin AM/PM
-            return source.ToString("dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-        }
-    }
-
-    public class StringToDateTimeConverter : IValueConverter<string, DateTime>
-    {
-        public DateTime Convert(string source, ResolutionContext context)
-        {
-            if (string.IsNullOrWhiteSpace(source))
-                throw new ArgumentException("La fecha no puede estar vacía");
-
-            // Limpiar y normalizar el string
-            source = source.Trim();
-
-            // Reemplazar variaciones de AM/PM
-            source = source.Replace("a. m.", "AM")
-                          .Replace("p. m.", "PM")
-                          .Replace("a.m.", "AM")
-                          .Replace("p.m.", "PM")
-                          .Replace("am", "AM")
-                          .Replace("pm", "PM");
-
-            // Definir todos los formatos posibles
-            string[] formats = new[]
-            {
-                "dd-MM-yyyy",                    // 18-11-2025
-                "dd-MM-yyyy HH:mm:ss",            // 18-11-2025 20:01:11
-                "dd-MM-yyyy hh:mm:ss tt",         // 18-11-2025 08:01:11 PM
-                "dd-MM-yyyy H:mm:ss",              // 18-11-2025 20:01:11
-                "dd-MM-yyyy h:mm:ss tt",           // 18-11-2025 8:01:11 PM
-                "dd/MM/yyyy",                      // 18/11/2025
-                "dd/MM/yyyy HH:mm:ss",             // 18/11/2025 20:01:11
-                "dd/MM/yyyy hh:mm:ss tt",          // 18/11/2025 08:01:11 PM
-                "yyyy-MM-dd",                       // 2025-11-18
-                "yyyy-MM-dd HH:mm:ss",              // 2025-11-18 20:01:11
-                "yyyy-MM-dd hh:mm:ss tt"            // 2025-11-18 08:01:11 PM
-            };
-
-            // Intentar parsear con los formatos definidos
-            if (DateTime.TryParseExact(source, formats,
-                CultureInfo.InvariantCulture,
-                DateTimeStyles.None,
-                out DateTime result))
-            {
-                return result;
-            }
-
-            // Si no funciona con formatos exactos, intentar parseo genérico
-            if (DateTime.TryParse(source, CultureInfo.InvariantCulture, DateTimeStyles.None, out result))
-            {
-                return result;
-            }
-
-            throw new FormatException($"No se pudo convertir la fecha '{source}' a DateTime. Formatos soportados: fecha, fecha y hora, fecha con AM/PM");
+            // CU-07: fecha, estado y revisión los fija el servidor.
+            CreateMap<CrearReclamoDto, Reclamo>()
+                .ForMember(d => d.Id, o => o.Ignore())
+                .ForMember(d => d.FechaEmitida, o => o.MapFrom(_ => DateTime.Now))
+                .ForMember(d => d.Estado, o => o.MapFrom(_ => "pendiente"))
+                .ForMember(d => d.FechaRevisada, o => o.Ignore())
+                .ForMember(d => d.Observacion, o => o.Ignore())
+                .ForMember(d => d.IdRevisor, o => o.Ignore())
+                .ForMember(d => d.IdObjetoNavigation, o => o.Ignore())
+                .ForMember(d => d.IdUsuarioNavigation, o => o.Ignore())
+                .ForMember(d => d.IdRevisorNavigation, o => o.Ignore());
         }
     }
 }
