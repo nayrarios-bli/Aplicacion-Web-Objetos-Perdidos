@@ -78,5 +78,22 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             _context.Objetos.Add(objeto);
             await _context.SaveChangesAsync();
         }
+
+        public async Task UpdateObjeto(Objeto objeto)
+        {
+            _context.Objetos.Update(objeto);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteObjeto(uint id)
+        {
+            var objeto = await GetObjetoByIdAsync(id);
+
+            if (objeto != null)
+            {
+                _context.Objetos.Remove(objeto);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

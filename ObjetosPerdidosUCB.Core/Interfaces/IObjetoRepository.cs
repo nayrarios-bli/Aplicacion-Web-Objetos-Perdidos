@@ -13,5 +13,8 @@ namespace ObjetosPerdidosUCB.Core.Interfaces
         Task<Objeto?> GetObjetoByIdAsync(uint id);
         Task<bool> ExistsCodigoAsync(string codigo);
         Task InsertObjeto(Objeto objeto);
+        Task UpdateObjeto(Objeto objeto);
+        Task DeleteObjeto(uint id);
+
     }
 }

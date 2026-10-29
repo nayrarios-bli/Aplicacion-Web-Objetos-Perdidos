@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using AutoMapper.Configuration.Conventions;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Services.Validators.Objetos;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
@@ -18,6 +21,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         private readonly ILugarAlmacenamientoRepository _lugarRepository;
         private readonly IMapper _mapper;
         private readonly CrearObjetoDtoValidator _crearValidator;
+        private readonly ObjetoDtoValidator _objetoValidator;
 
         public ObjetoController(
             IObjetoRepository objetoRepository,
@@ -25,7 +29,8 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             ICategoriaRepository categoriaRepository,
             ILugarAlmacenamientoRepository lugarRepository,
             IMapper mapper,
-            CrearObjetoDtoValidator crearValidator)
+            CrearObjetoDtoValidator crearValidator,
+            ObjetoDtoValidator objetoValidator)
         {
             _objetoRepository = objetoRepository;
             _usuarioRepository = usuarioRepository;
@@ -33,6 +38,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             _lugarRepository = lugarRepository;
             _mapper = mapper;
             _crearValidator = crearValidator;
+            _objetoValidator = objetoValidator;
         }
 
         /// <summary>
@@ -87,7 +93,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             }
         }
 
-        /// <summary>CU-02 Registrar objeto encontrado.</summary>
+        /// <summary>CU-02 Gestionar objetos encontrados.</summary>
         [HttpPost]
         public async Task<IActionResult> InsertObjeto([FromBody] CrearObjetoDto objetoDto)
         {
@@ -127,6 +133,71 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ObjetoDto objetoDto)
+        {
+            if (id != objetoDto.Id)
+                return BadRequest("El ID del post no coincide.");
+
+            // Validar el DTO
+            var validationResult = await _objetoValidator.ValidateAsync(objetoDto);
+            if (!validationResult.IsValid)
+                return BadRequest(ValidationResponse.From(validationResult));
+
+            try
+            {
+                var usuario = await _usuarioRepository.GetUsuarioByIdAsync(objetoDto.IdUsuarioRegistro);
+                if (usuario == null || !usuario.Estado)
+                    return BadRequest(new { message = "El usuario que registra el objeto no existe o está inactivo." });
+
+                var categoria = await _categoriaRepository.GetCategoriaByIdAsync(objetoDto.IdCategoria);
+                if (categoria == null || !categoria.Estado)
+                    return BadRequest(new { message = "La categoría no existe o está inactiva." });
+
+                var lugar = await _lugarRepository.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
+                if (lugar == null || !lugar.Estado)
+                    return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
+
+                if (await _objetoRepository.ExistsCodigoAsync(objetoDto.Codigo))
+                    return Conflict(new { message = $"Ya existe un objeto con el código {objetoDto.Codigo}." });
+
+                var objeto = _mapper.Map<Objeto>(objetoDto);
+                await _objetoRepository.UpdateObjeto(objeto);
+
+                // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
+                var actualizado = await _objetoRepository.GetObjetoByIdAsync(objeto.Id);
+                var resultDto = _mapper.Map<ObjetoDto>(actualizado);
+
+                return StatusCode(200, new ApiResponse<ObjetoDto>(resultDto,"Objeto actualizado correctamente."));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePostDtoMapper(uint id)
+        {
+            // Validar que el ID sea válido
+            if (id <= 0)
+                return BadRequest(new { message = "El ID debe ser mayor que cero." });
+
+            var objeto = await _objetoRepository.GetObjetoByIdAsync(id);
+            if (objeto == null)
+                return NotFound(new { message = "Post no encontrado." });
+
+            try
+            {;
+                await _objetoRepository.DeleteObjeto(id);
+                return NoContent(); // 204 sin contenido
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al eliminar el post", error = ex.Message });
             }
         }
     }
