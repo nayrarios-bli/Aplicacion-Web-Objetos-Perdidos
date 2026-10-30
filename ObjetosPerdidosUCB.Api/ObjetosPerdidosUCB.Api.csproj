@@ -21,4 +21,8 @@
     <ProjectReference Include="..\ObjetosPerdidosUCB.Services\ObjetosPerdidosUCB.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
 </Project>

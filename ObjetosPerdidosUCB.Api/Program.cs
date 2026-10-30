@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ObjetosPerdidosUCB.Api.Filters;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Infrastructure.Data;
 using ObjetosPerdidosUCB.Infrastructure.Mappings;
@@ -38,6 +39,7 @@ namespace ObjetosPerdidosUCB.Api
 
             // Validadores de FluentValidation
             builder.Services.AddScoped<CrearObjetoDtoValidator>();
+            builder.Services.AddScoped<ObjetoDtoValidator>();
             builder.Services.AddScoped<CrearReclamoDtoValidator>();
             builder.Services.AddScoped<CrearUsuarioDtoValidator>();
             builder.Services.AddScoped<ActualizarUsuarioDtoValidator>();
@@ -55,6 +57,8 @@ namespace ObjetosPerdidosUCB.Api
 
 
             var app = builder.Build();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             if (app.Environment.IsDevelopment())
             {

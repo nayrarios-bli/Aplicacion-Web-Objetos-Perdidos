@@ -146,8 +146,8 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
             }
         }
-            [HttpPut("dto/mapper/{id}")]
-            public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ObjetoDto objetoDto, [FromBody] uint idUsuarioAdmin)
+            [HttpPut("dto/mapper/{id}/{idUsuarioAdmin}")]
+            public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ObjetoDto objetoDto, uint idUsuarioAdmin)
             {
                 if (id != objetoDto.Id)
                     return BadRequest("El ID del post no coincide.");
