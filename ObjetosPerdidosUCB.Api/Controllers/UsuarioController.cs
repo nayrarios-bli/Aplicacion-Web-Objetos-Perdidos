@@ -12,18 +12,18 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IUsuarioService _usuarioService;
         private readonly IMapper _mapper;
         private readonly CrearUsuarioDtoValidator _crearValidator;
         private readonly ActualizarUsuarioDtoValidator _actualizarValidator;
 
         public UsuarioController(
-            IUsuarioRepository usuarioRepository,
+            IUsuarioService usuarioService,
             IMapper mapper,
             CrearUsuarioDtoValidator crearValidator,
             ActualizarUsuarioDtoValidator actualizarValidator)
         {
-            _usuarioRepository = usuarioRepository;
+            _usuarioService = usuarioService;
             _mapper = mapper;
             _crearValidator = crearValidator;
             _actualizarValidator = actualizarValidator;
@@ -32,7 +32,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetUsuarios()
         {
-            var usuarios = await _usuarioRepository.GetAllUsuariosAsync();
+            var usuarios = await _usuarioService.GetAllUsuariosAsync();
             var usuariosDto = _mapper.Map<IEnumerable<UsuarioDto>>(usuarios);
             return Ok(new ApiResponse<IEnumerable<UsuarioDto>>(usuariosDto));
         }
@@ -40,7 +40,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetUsuarioById(uint id)
         {
-            var usuario = await _usuarioRepository.GetUsuarioByIdAsync(id);
+            var usuario = await _usuarioService.GetUsuarioByIdAsync(id);
             if (usuario == null)
                 return NotFound(new { message = "Usuario no encontrado." });
 
@@ -54,7 +54,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             if (!validationResult.IsValid)
                 return BadRequest(ValidationResponse.From(validationResult));
 
-            if (await _usuarioRepository.GetUsuarioByCorreoAsync(usuarioDto.CorreoElectronico) != null)
+            if (await _usuarioService.GetUsuarioByCorreoAsync(usuarioDto.CorreoElectronico) != null)
                 return Conflict(new { message = "Ya existe un usuario con ese correo electrónico." });
 
             try
@@ -63,7 +63,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 // Requiere el paquete NuGet BCrypt.Net-Next en el proyecto Api.
                 usuario.Contrasena = BCrypt.Net.BCrypt.HashPassword(usuarioDto.Contrasena);
 
-                await _usuarioRepository.InsertUsuario(usuario);
+                await _usuarioService.InsertUsuario(usuario);
 
                 var resultDto = _mapper.Map<UsuarioDto>(usuario);
                 return CreatedAtAction(nameof(GetUsuarioById), new { id = usuario.Id },
@@ -85,18 +85,18 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             if (!validationResult.IsValid)
                 return BadRequest(ValidationResponse.From(validationResult));
 
-            var usuario = await _usuarioRepository.GetUsuarioByIdAsync(id);
+            var usuario = await _usuarioService.GetUsuarioByIdAsync(id);
             if (usuario == null)
                 return NotFound(new { message = "Usuario no encontrado." });
 
-            var otro = await _usuarioRepository.GetUsuarioByCorreoAsync(usuarioDto.CorreoElectronico);
+            var otro = await _usuarioService.GetUsuarioByCorreoAsync(usuarioDto.CorreoElectronico);
             if (otro != null && otro.Id != id)
                 return Conflict(new { message = "Ya existe otro usuario con ese correo electrónico." });
 
             try
             {
                 _mapper.Map(usuarioDto, usuario); // la contraseña no se toca
-                await _usuarioRepository.UpdateUsuario(usuario);
+                await _usuarioService.UpdateUsuario(usuario);
                 return Ok(new ApiResponse<UsuarioDto>(_mapper.Map<UsuarioDto>(usuario)));
             }
             catch (Exception ex)
@@ -112,14 +112,14 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpDelete("dto/mapper/{id}")]
         public async Task<IActionResult> DeactivateUsuario(uint id)
         {
-            var usuario = await _usuarioRepository.GetUsuarioByIdAsync(id);
+            var usuario = await _usuarioService.GetUsuarioByIdAsync(id);
             if (usuario == null)
                 return NotFound(new { message = "Usuario no encontrado." });
 
             try
             {
                 usuario.Estado = false;
-                await _usuarioRepository.UpdateUsuario(usuario);
+                await _usuarioService.UpdateUsuario(usuario);
                 return NoContent();
             }
             catch (Exception ex)

@@ -4,6 +4,7 @@ using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Services.Interfaces;
 using ObjetosPerdidosUCB.Services.Validators.Objetos;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
@@ -12,26 +13,29 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     [ApiController]
     public class ObjetoController : ControllerBase
     {
-        private readonly IObjetoRepository _objetoRepository;
-        private readonly IUsuarioRepository _usuarioRepository;
-        private readonly ICategoriaRepository _categoriaRepository;
-        private readonly ILugarAlmacenamientoRepository _lugarRepository;
+        private readonly IObjetoService _objetoService;
+        private readonly IUsuarioService _usuarioService;
+        private readonly ICategoriaService _categoriaService;
+        private readonly ILugarAlmacenamientoService _lugarService;
         private readonly IMapper _mapper;
         private readonly CrearObjetoDtoValidator _crearValidator;
+        private readonly ObjetoDtoValidator _objetoValidator;
 
         public ObjetoController(
-            IObjetoRepository objetoRepository,
-            IUsuarioRepository usuarioRepository,
-            ICategoriaRepository categoriaRepository,
-            ILugarAlmacenamientoRepository lugarRepository,
+            IObjetoService objetoService,
+            IUsuarioService usuarioService,
+            ICategoriaService categoriaService,
+            ILugarAlmacenamientoService lugarService,
             IMapper mapper,
-            CrearObjetoDtoValidator crearValidator)
+            CrearObjetoDtoValidator crearValidator,
+            ObjetoDtoValidator objetoValidator)
         {
-            _objetoRepository = objetoRepository;
-            _usuarioRepository = usuarioRepository;
-            _categoriaRepository = categoriaRepository;
-            _lugarRepository = lugarRepository;
+            _objetoService = objetoService;
+            _usuarioService = usuarioService;
+            _categoriaService = categoriaService;
+            _lugarService = lugarService;
             _mapper = mapper;
+            _objetoValidator = objetoValidator;
             _crearValidator = crearValidator;
         }
 
@@ -49,7 +53,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         {
             try
             {
-                var objetos = await _objetoRepository.SearchObjetosAsync(
+                var objetos = await _objetoService.SearchObjetosAsync(
                     texto, idCategoria, idLugarAlmacenamiento, lugarEncontrado, soloDisponibles);
 
                 var objetosDto = _mapper.Map<IEnumerable<ObjetoDto>>(objetos).ToList();
@@ -69,7 +73,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
         public async Task<IActionResult> GetObjetoDtoMapper()
         {
-            var objetos = await _objetoRepository.GetAllObjetosAsync();
+            var objetos = await _objetoService.GetAllObjetosAsync();
             var objetoDto = _mapper.Map<IEnumerable<ObjetoDto>>(objetos);
            
 
@@ -88,7 +92,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
             try
             {
-                var objeto = await _objetoRepository.GetObjetoByIdAsync(id);
+                var objeto = await _objetoService.GetObjetoByIdAsync(id);
                 if (objeto == null)
                     return NotFound(new { message = "Objeto no encontrado." });
 
@@ -110,26 +114,26 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
             try
             {
-                var usuario = await _usuarioRepository.GetUsuarioByIdAsync(objetoDto.IdUsuarioRegistro);
+                var usuario = await _usuarioService.GetUsuarioByIdAsync(objetoDto.IdUsuarioRegistro);
                 if (usuario == null || !usuario.Estado)
                     return BadRequest(new { message = "El usuario que registra el objeto no existe o está inactivo." });
 
-                var categoria = await _categoriaRepository.GetCategoriaByIdAsync(objetoDto.IdCategoria);
+                var categoria = await _categoriaService.GetCategoriaByIdAsync(objetoDto.IdCategoria);
                 if (categoria == null || !categoria.Estado)
                     return BadRequest(new { message = "La categoría no existe o está inactiva." });
 
-                var lugar = await _lugarRepository.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
+                var lugar = await _lugarService.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
                 if (lugar == null || !lugar.Estado)
                     return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
 
-                if (await _objetoRepository.ExistsCodigoAsync(objetoDto.Codigo))
+                if (await _objetoService.ExistsCodigoAsync(objetoDto.Codigo))
                     return Conflict(new { message = $"Ya existe un objeto con el código {objetoDto.Codigo}." });
 
                 var objeto = _mapper.Map<Objeto>(objetoDto);
-                await _objetoRepository.InsertObjeto(objeto);
+                await _objetoService.InsertObjeto(objeto);
 
                 // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
-                var guardado = await _objetoRepository.GetObjetoByIdAsync(objeto.Id);
+                var guardado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
                 var resultDto = _mapper.Map<ObjetoDto>(guardado);
 
                 return CreatedAtAction(
@@ -142,5 +146,71 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
             }
         }
+            [HttpPut("dto/mapper/{id}")]
+            public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ObjetoDto objetoDto, [FromBody] uint idUsuarioAdmin)
+            {
+                if (id != objetoDto.Id)
+                    return BadRequest("El ID del post no coincide.");
+
+                // Validar el DTO
+                var validationResult = await _objetoValidator.ValidateAsync(objetoDto);
+                if (!validationResult.IsValid)
+                    return BadRequest(ValidationResponse.From(validationResult));
+
+                try
+                {
+                    var usuario = await _usuarioService.GetUsuarioByIdAsync(objetoDto.IdUsuarioRegistro);
+                    if (usuario == null || !usuario.Estado)
+                        return BadRequest(new { message = "El usuario que registra el objeto no existe o está inactivo." });
+
+                    var categoria = await _categoriaService.GetCategoriaByIdAsync(objetoDto.IdCategoria);
+                    if (categoria == null || !categoria.Estado)
+                        return BadRequest(new { message = "La categoría no existe o está inactiva." });
+
+                    var lugar = await _lugarService.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
+                    if (lugar == null || !lugar.Estado)
+                        return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
+
+                    if (await _objetoService.ExistsCodigoAsync(objetoDto.Codigo))
+                        return Conflict(new { message = $"Ya existe un objeto con el código {objetoDto.Codigo}." });
+
+                    var objeto = _mapper.Map<Objeto>(objetoDto);
+                    await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
+
+                    // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
+                    var actualizado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
+                    var resultDto = _mapper.Map<ObjetoDto>(actualizado);
+
+                    return StatusCode(200, new ApiResponse<ObjetoDto>(resultDto, "Objeto actualizado correctamente."));
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
+                }
+            }
+
+            [HttpDelete("dto/mapper/{id}")]
+            public async Task<IActionResult> DeletePostDtoMapper(uint id, [FromQuery] uint idUsuarioAdmin)
+            {
+                // Validar que el ID sea válido
+                if (id <= 0)
+                    return BadRequest(new { message = "El ID debe ser mayor que cero." });
+
+                var objeto = await _objetoService.GetObjetoByIdAsync(id);
+                if (objeto == null)
+                    return NotFound(new { message = "Post no encontrado." });
+
+                try
+                {
+                    ;
+                    await _objetoService.DeleteObjeto(id, idUsuarioAdmin);
+                    return NoContent(); // 204 sin contenido
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, new { message = "Error al eliminar el post", error = ex.Message });
+                }
+            }
+        
     }
 }

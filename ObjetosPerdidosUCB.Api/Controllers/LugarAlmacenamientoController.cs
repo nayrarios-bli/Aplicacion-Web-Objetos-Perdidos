@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Services.Interfaces;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
@@ -10,12 +11,12 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     [ApiController]
     public class LugarAlmacenamientoController : ControllerBase
     {
-        private readonly ILugarAlmacenamientoRepository _lugarRepository;
+        private readonly ILugarAlmacenamientoService _lugarService;
         private readonly IMapper _mapper;
 
-        public LugarAlmacenamientoController(ILugarAlmacenamientoRepository lugarRepository, IMapper mapper)
+        public LugarAlmacenamientoController(ILugarAlmacenamientoService lugarService, IMapper mapper)
         {
-            _lugarRepository = lugarRepository;
+            _lugarService = lugarService;
             _mapper = mapper;
         }
 
@@ -23,7 +24,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetLugares([FromQuery] bool soloActivos = true)
         {
-            var lugares = await _lugarRepository.GetAllLugaresAsync(soloActivos);
+            var lugares = await _lugarService.GetAllLugaresAsync(soloActivos);
             var lugaresDto = _mapper.Map<IEnumerable<LugarAlmacenamientoDto>>(lugares);
             return Ok(new ApiResponse<IEnumerable<LugarAlmacenamientoDto>>(lugaresDto));
         }
@@ -31,7 +32,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetLugarById(uint id)
         {
-            var lugar = await _lugarRepository.GetLugarByIdAsync(id);
+            var lugar = await _lugarService.GetLugarByIdAsync(id);
             if (lugar == null)
                 return NotFound(new { message = "Lugar de almacenamiento no encontrado." });
 

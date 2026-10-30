@@ -1,8 +1,7 @@
 ﻿namespace ObjetosPerdidosUCB.Core.Entities;
 
-public partial class Objeto
+public partial class Objeto : BaseEntity 
 {
-    public uint Id { get; set; }
 
     public string Codigo { get; set; } = null!;
 

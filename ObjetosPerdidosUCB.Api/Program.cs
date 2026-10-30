@@ -3,6 +3,8 @@ using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Infrastructure.Data;
 using ObjetosPerdidosUCB.Infrastructure.Mappings;
 using ObjetosPerdidosUCB.Infrastructure.Repositories;
+using ObjetosPerdidosUCB.Services.Interfaces;
+using ObjetosPerdidosUCB.Services.Service;
 using ObjetosPerdidosUCB.Services.Validators.Objetos;
 using ObjetosPerdidosUCB.Services.Validators.Reclamos;
 using ObjetosPerdidosUCB.Services.Validators.Usuarios;
@@ -39,6 +41,18 @@ namespace ObjetosPerdidosUCB.Api
             builder.Services.AddScoped<CrearReclamoDtoValidator>();
             builder.Services.AddScoped<CrearUsuarioDtoValidator>();
             builder.Services.AddScoped<ActualizarUsuarioDtoValidator>();
+            builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            builder.Services.AddScoped<IObjetoRepository, ObjetoRepository>();
+            builder.Services.AddScoped<IObjetoService, ObjetoService>();
+            builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+            builder.Services.AddScoped<IReclamoService, ReclamoService>();
+            builder.Services.AddScoped<IReclamoRepository, ReclamoRepository>();
+            builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+            builder.Services.AddScoped<ILugarAlmacenamientoRepository, LugarAlmacenamientoRepository>();
+            builder.Services.AddScoped<ILugarAlmacenamientoService, LugarAlmacenadoService>();
+
 
             var app = builder.Build();
 

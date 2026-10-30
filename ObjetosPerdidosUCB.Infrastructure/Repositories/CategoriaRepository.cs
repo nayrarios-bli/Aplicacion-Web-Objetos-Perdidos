@@ -23,9 +23,6 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             return await query.OrderBy(c => c.Nombre).ToListAsync();
         }
 
-        public async Task<Categoria?> GetCategoriaByIdAsync(uint id)
-        {
-            return await _context.Categorias.FirstOrDefaultAsync(c => c.Id == id);
-        }
+       
     }
 }

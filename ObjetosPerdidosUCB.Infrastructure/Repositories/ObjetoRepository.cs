@@ -13,12 +13,15 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         {
             _context = context;
         }
-
-        public async Task<IEnumerable<Objeto>> GetAllObjetosAsync()
+        public async Task<Objeto?> GetObjetoByIdAsync(uint id)
         {
-            var objetos = await _context.Objetos.ToListAsync();
-            return objetos;
+            return await _context.Objetos
+                .Include(o => o.IdCategoriaNavigation)
+                .Include(o => o.Detalle)
+                    .ThenInclude(d => d!.IdLugarAlmacenamientoNavigation)
+                .FirstOrDefaultAsync(o => o.Id == id);
         }
+
         public async Task<IEnumerable<Objeto>> SearchObjetosAsync(
             string? texto,
             uint? idCategoria,
@@ -64,18 +67,12 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Objeto?> GetObjetoByIdAsync(uint id)
-        {
-            return await _context.Objetos
-                .Include(o => o.IdCategoriaNavigation)
-                .Include(o => o.Detalle)
-                    .ThenInclude(d => d!.IdLugarAlmacenamientoNavigation)
-                .FirstOrDefaultAsync(o => o.Id == id);
-        }
+        
 
-        public async Task<bool> ExistsCodigoAsync(string codigo)
+        public async Task<bool> ExistsCodigoAsync(string codigo, uint? excludeId = null)
         {
-            return await _context.Objetos.AnyAsync(o => o.Codigo == codigo);
+            return await _context.Objetos.AnyAsync(o => 
+            o.Codigo == codigo && (excludeId == null || o.Id != excludeId));
         }
 
         public async Task InsertObjeto(Objeto objeto)

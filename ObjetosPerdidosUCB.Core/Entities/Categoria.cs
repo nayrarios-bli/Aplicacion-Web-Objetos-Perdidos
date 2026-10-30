@@ -1,8 +1,8 @@
 ﻿namespace ObjetosPerdidosUCB.Core.Entities;
 
-public partial class Categoria
+public partial class Categoria : BaseEntity
 {
-    public uint Id { get; set; }
+   
 
     public string Nombre { get; set; } = null!;
 

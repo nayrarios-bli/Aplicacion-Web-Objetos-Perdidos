@@ -14,31 +14,13 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Usuario>> GetAllUsuariosAsync()
-        {
-            return await _context.Usuarios.AsNoTracking().ToListAsync();
-        }
-
-        public async Task<Usuario?> GetUsuarioByIdAsync(uint id)
-        {
-            return await _context.Usuarios.FirstOrDefaultAsync(u => u.Id == id);
-        }
+       
 
         public async Task<Usuario?> GetUsuarioByCorreoAsync(string correo)
         {
             return await _context.Usuarios.FirstOrDefaultAsync(u => u.CorreoElectronico == correo);
         }
 
-        public async Task InsertUsuario(Usuario usuario)
-        {
-            _context.Usuarios.Add(usuario);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateUsuario(Usuario usuario)
-        {
-            _context.Usuarios.Update(usuario);
-            await _context.SaveChangesAsync();
-        }
+       
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace ObjetosPerdidosUCB.Core.Entities;
 
-public partial class Reclamo
+public partial class Reclamo : BaseEntity
 {
-    public uint Id { get; set; }
+   
 
     public string Justificacion { get; set; } = null!;
 

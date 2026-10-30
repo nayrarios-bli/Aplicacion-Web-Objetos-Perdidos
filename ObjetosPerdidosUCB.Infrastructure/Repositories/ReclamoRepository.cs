@@ -22,10 +22,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Reclamo?> GetReclamoByIdAsync(uint id)
-        {
-            return await _context.Reclamos.FirstOrDefaultAsync(r => r.Id == id);
-        }
+       
 
         public async Task<bool> ExistsPendienteAsync(uint idObjeto, uint idUsuario)
         {
@@ -35,10 +32,6 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
                 r.Estado == "pendiente");
         }
 
-        public async Task InsertReclamo(Reclamo reclamo)
-        {
-            _context.Reclamos.Add(reclamo);
-            await _context.SaveChangesAsync();
-        }
+      
     }
 }

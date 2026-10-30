@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Services.Interfaces;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
@@ -10,12 +11,12 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     [ApiController]
     public class CategoriaController : ControllerBase
     {
-        private readonly ICategoriaRepository _categoriaRepository;
+        private readonly ICategoriaService _categoriaService;
         private readonly IMapper _mapper;
 
-        public CategoriaController(ICategoriaRepository categoriaRepository, IMapper mapper)
+        public CategoriaController(ICategoriaService categoriaService, IMapper mapper)
         {
-            _categoriaRepository = categoriaRepository;
+            _categoriaService = categoriaService;
             _mapper = mapper;
         }
 
@@ -23,7 +24,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetCategorias([FromQuery] bool soloActivas = true)
         {
-            var categorias = await _categoriaRepository.GetAllCategoriasAsync(soloActivas);
+            var categorias = await _categoriaService.GetAllCategoriasAsync(soloActivas);
             var categoriasDto = _mapper.Map<IEnumerable<CategoriaDto>>(categorias);
             return Ok(new ApiResponse<IEnumerable<CategoriaDto>>(categoriasDto));
         }
@@ -31,7 +32,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetCategoriaById(uint id)
         {
-            var categoria = await _categoriaRepository.GetCategoriaByIdAsync(id);
+            var categoria = await _categoriaService.GetCategoriaByIdAsync(id);
             if (categoria == null)
                 return NotFound(new { message = "Categoría no encontrada." });
 

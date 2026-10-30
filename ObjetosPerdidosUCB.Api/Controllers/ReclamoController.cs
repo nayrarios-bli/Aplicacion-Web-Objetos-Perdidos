@@ -4,6 +4,7 @@ using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Services.Interfaces;
 using ObjetosPerdidosUCB.Services.Validators.Reclamos;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
@@ -12,22 +13,22 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     [ApiController]
     public class ReclamoController : ControllerBase
     {
-        private readonly IReclamoRepository _reclamoRepository;
-        private readonly IObjetoRepository _objetoRepository;
-        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IReclamoService _reclamoService;
+        private readonly IObjetoService _objetoService;
+        private readonly IUsuarioService _usuarioService;
         private readonly IMapper _mapper;
         private readonly CrearReclamoDtoValidator _crearValidator;
 
         public ReclamoController(
-            IReclamoRepository reclamoRepository,
-            IObjetoRepository objetoRepository,
-            IUsuarioRepository usuarioRepository,
+           IReclamoService reclamoService,
+           IObjetoService objetoService,
+           IUsuarioService usuarioService,
             IMapper mapper,
             CrearReclamoDtoValidator crearValidator)
         {
-            _reclamoRepository = reclamoRepository;
-            _objetoRepository = objetoRepository;
-            _usuarioRepository = usuarioRepository;
+            _reclamoService = reclamoService;
+            _objetoService = objetoService;
+            _usuarioService = usuarioService;
             _mapper = mapper;
             _crearValidator = crearValidator;
         }
@@ -35,7 +36,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetReclamos()
         {
-            var reclamos = await _reclamoRepository.GetAllReclamosAsync();
+            var reclamos = await _reclamoService.GetAllReclamosAsync();
             var reclamosDto = _mapper.Map<IEnumerable<ReclamoDto>>(reclamos);
             return Ok(new ApiResponse<IEnumerable<ReclamoDto>>(reclamosDto));
         }
@@ -43,7 +44,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetReclamoById(uint id)
         {
-            var reclamo = await _reclamoRepository.GetReclamoByIdAsync(id);
+            var reclamo = await _reclamoService.GetReclamoByIdAsync(id);
             if (reclamo == null)
                 return NotFound(new { message = "Reclamo no encontrado." });
 
@@ -60,22 +61,22 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
             try
             {
-                var usuario = await _usuarioRepository.GetUsuarioByIdAsync(reclamoDto.IdUsuario);
+                var usuario = await _usuarioService.GetUsuarioByIdAsync(reclamoDto.IdUsuario);
                 if (usuario == null || !usuario.Estado)
                     return BadRequest(new { message = "El usuario no existe o está inactivo." });
 
-                var objeto = await _objetoRepository.GetObjetoByIdAsync(reclamoDto.IdObjeto);
+                var objeto = await _objetoService.GetObjetoByIdAsync(reclamoDto.IdObjeto);
                 if (objeto == null)
                     return NotFound(new { message = "Objeto no encontrado." });
 
                 if (!objeto.Estado)
                     return BadRequest(new { message = "El objeto ya fue entregado y no puede reclamarse." });
 
-                if (await _reclamoRepository.ExistsPendienteAsync(reclamoDto.IdObjeto, reclamoDto.IdUsuario))
+                if (await _reclamoService.ExistsPendienteAsync(reclamoDto.IdObjeto, reclamoDto.IdUsuario))
                     return Conflict(new { message = "Ya tienes un reclamo pendiente sobre este objeto." });
 
                 var reclamo = _mapper.Map<Reclamo>(reclamoDto);
-                await _reclamoRepository.InsertReclamo(reclamo);
+                await _reclamoService.InsertReclamo(reclamo);
 
                 var resultDto = _mapper.Map<ReclamoDto>(reclamo);
                 return CreatedAtAction(nameof(GetReclamoById), new { id = reclamo.Id },
