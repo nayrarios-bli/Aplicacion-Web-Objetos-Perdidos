@@ -1,11 +1,15 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
+using ObjetosPerdidosUCB.Core.Excepctions;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Services.Interfaces;
 using ObjetosPerdidosUCB.Services.Validators.Objetos;
+using System.Net;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
@@ -19,6 +23,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         private readonly ILugarAlmacenamientoService _lugarService;
         private readonly IMapper _mapper;
         private readonly CrearObjetoDtoValidator _crearValidator;
+        private readonly ActualizarObjetoValidator _actualizarValidator;
         private readonly ObjetoDtoValidator _objetoValidator;
 
         public ObjetoController(
@@ -28,7 +33,8 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             ILugarAlmacenamientoService lugarService,
             IMapper mapper,
             CrearObjetoDtoValidator crearValidator,
-            ObjetoDtoValidator objetoValidator)
+            ObjetoDtoValidator objetoValidator,
+            ActualizarObjetoValidator actualizarValidator)
         {
             _objetoService = objetoService;
             _usuarioService = usuarioService;
@@ -37,6 +43,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             _mapper = mapper;
             _objetoValidator = objetoValidator;
             _crearValidator = crearValidator;
+            _actualizarValidator = actualizarValidator;
         }
 
         /// <summary>
@@ -147,13 +154,13 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             }
         }
             [HttpPut("dto/mapper/{id}/{idUsuarioAdmin}")]
-            public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ObjetoDto objetoDto, uint idUsuarioAdmin)
+            public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ActualizarObjetoDto objetoDto, uint idUsuarioAdmin)
             {
                 if (id != objetoDto.Id)
                     return BadRequest("El ID del post no coincide.");
 
                 // Validar el DTO
-                var validationResult = await _objetoValidator.ValidateAsync(objetoDto);
+                var validationResult = await _actualizarValidator.ValidateAsync(objetoDto);
                 if (!validationResult.IsValid)
                     return BadRequest(ValidationResponse.From(validationResult));
 
@@ -170,9 +177,6 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                     var lugar = await _lugarService.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
                     if (lugar == null || !lugar.Estado)
                         return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
-
-                    if (await _objetoService.ExistsCodigoAsync(objetoDto.Codigo))
-                        return Conflict(new { message = $"Ya existe un objeto con el código {objetoDto.Codigo}." });
 
                     var objeto = _mapper.Map<Objeto>(objetoDto);
                     await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
@@ -202,7 +206,6 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
                 try
                 {
-                    ;
                     await _objetoService.DeleteObjeto(id, idUsuarioAdmin);
                     return NoContent(); // 204 sin contenido
                 }

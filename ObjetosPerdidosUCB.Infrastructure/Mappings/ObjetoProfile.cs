@@ -28,6 +28,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Mappings
                 .ForMember(d => d.IdUsuarioRegistro,
                     o => o.MapFrom(s => ObjetoMapHelper.IdUsuarioRegistro(s.Detalle)));
 
+
             // CU-02: CrearObjetoDto -> Objeto con su Detalle (se guardan juntos).
             CreateMap<CrearObjetoDto, Objeto>()
                 .ForMember(d => d.Id, o => o.Ignore())
@@ -42,6 +43,31 @@ namespace ObjetosPerdidosUCB.Infrastructure.Mappings
                     IdLugarAlmacenamiento = s.IdLugarAlmacenamiento,
                     IdUsuarioRegistro = s.IdUsuarioRegistro
                 }));
+
+            CreateMap<ActualizarObjetoDto, Objeto>()
+    .ForMember(d => d.IdCategoriaNavigation,
+        o => o.Ignore())
+
+    .ForMember(d => d.Reclamos,
+        o => o.Ignore())
+
+    .ForMember(d => d.Detalle,
+        o => o.MapFrom(s => new Detalleobjeto
+        {
+            LugarEncontrado = s.LugarEncontrado,
+            FechaEncontrada = FechaParser.ParseDateOnly(s.FechaEncontrada),
+
+            FechaEntrega =
+                string.IsNullOrWhiteSpace(s.FechaEntrega)
+                ? null
+                : FechaParser.ParseDateOnly(s.FechaEntrega),
+
+            DetalleVerificacion = s.DetalleVerificacion,
+
+            IdLugarAlmacenamiento = s.IdLugarAlmacenamiento,
+
+            IdUsuarioRegistro = s.IdUsuarioRegistro
+        }));
         }
     }
 }
