@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ObjetosPerdidosUCB.Api.Filters;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Infrastructure.Data;
 using ObjetosPerdidosUCB.Infrastructure.Mappings;
@@ -43,6 +44,8 @@ namespace ObjetosPerdidosUCB.Api
             builder.Services.AddScoped<ActualizarUsuarioDtoValidator>();
 
             var app = builder.Build();
+
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             if (app.Environment.IsDevelopment())
             {
