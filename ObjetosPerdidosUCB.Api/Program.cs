@@ -27,6 +27,7 @@ namespace ObjetosPerdidosUCB.Api
             builder.Services.AddTransient<IObjetoRepository, ObjetoRepository>();
             builder.Services.AddTransient<IReclamoRepository, ReclamoRepository>();
             builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
