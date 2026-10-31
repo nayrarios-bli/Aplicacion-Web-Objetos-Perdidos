@@ -16,6 +16,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         public async Task<Objeto?> GetObjetoByIdAsync(uint id)
         {
             return await _context.Objetos
+                .AsNoTracking()
                 .Include(o => o.IdCategoriaNavigation)
                 .Include(o => o.Detalle)
                     .ThenInclude(d => d!.IdLugarAlmacenamientoNavigation)
@@ -75,12 +76,18 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             o.Codigo == codigo && (excludeId == null || o.Id != excludeId));
         }
 
-        public async Task InsertObjeto(Objeto objeto)
+        // Trackeado y solo con Detalle: así EF detecta únicamente lo que cambió
+        public async Task<Objeto?> GetObjetoParaActualizarAsync(uint id)
         {
-            _context.Objetos.Add(objeto);
+            return await _context.Objetos
+                .Include(o => o.Detalle)
+                .FirstOrDefaultAsync(o => o.Id == id);
+        }
+
+        public async Task UpdateObjetoAsync(Objeto objeto)
+        {
             await _context.SaveChangesAsync();
         }
 
-        
     }
 }

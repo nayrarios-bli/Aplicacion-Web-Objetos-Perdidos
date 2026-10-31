@@ -39,7 +39,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 
         public async Task<T?> GetById(uint id)
         {
-            return await _entities.FirstAsync(x => x.Id == id);
+            return await _entities.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task Update(T entity)

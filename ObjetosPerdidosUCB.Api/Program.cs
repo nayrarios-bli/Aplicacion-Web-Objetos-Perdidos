@@ -39,8 +39,8 @@ namespace ObjetosPerdidosUCB.Api
             builder.Services.AddAutoMapper(typeof(ObjetoProfile).Assembly);
 
             // Validadores de FluentValidation
-            builder.Services.AddScoped<CrearObjetoDtoValidator>();
-            builder.Services.AddScoped<ActualizarObjetoValidator>();
+            builder.Services.AddScoped<CrearObjetoDtoValidator>(); 
+            builder.Services.AddScoped<ActualizarObjetoDtoValidator>();
             builder.Services.AddScoped<ObjetoDtoValidator>();
             builder.Services.AddScoped<CrearReclamoDtoValidator>();
             builder.Services.AddScoped<CrearUsuarioDtoValidator>();

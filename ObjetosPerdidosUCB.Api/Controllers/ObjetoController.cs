@@ -23,7 +23,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         private readonly ILugarAlmacenamientoService _lugarService;
         private readonly IMapper _mapper;
         private readonly CrearObjetoDtoValidator _crearValidator;
-        private readonly ActualizarObjetoValidator _actualizarValidator;
+        private readonly ActualizarObjetoDtoValidator _actualizarValidator;
         private readonly ObjetoDtoValidator _objetoValidator;
 
         public ObjetoController(
@@ -34,7 +34,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             IMapper mapper,
             CrearObjetoDtoValidator crearValidator,
             ObjetoDtoValidator objetoValidator,
-            ActualizarObjetoValidator actualizarValidator)
+            ActualizarObjetoDtoValidator actualizarValidator)
         {
             _objetoService = objetoService;
             _usuarioService = usuarioService;
@@ -153,47 +153,56 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
             }
         }
-            [HttpPut("dto/mapper/{id}/{idUsuarioAdmin}")]
-            public async Task<IActionResult> UpdateObjeto(uint id, [FromBody] ActualizarObjetoDto objetoDto, uint idUsuarioAdmin)
+        [HttpPut("dto/mapper/{id}")]
+        public async Task<IActionResult> UpdateObjeto(
+uint id,
+[FromBody] ActualizarObjetoDto objetoDto,
+[FromQuery] uint idUsuarioAdmin)
+        {
+            if (id == 0)
+                return BadRequest(new { message = "El ID debe ser mayor que cero." });
+
+            if (id != objetoDto.Id)
+                return BadRequest(new { message = "El ID de la ruta no coincide con el del cuerpo." });
+
+            var validationResult = await _actualizarValidator.ValidateAsync(objetoDto);
+            if (!validationResult.IsValid)
+                return BadRequest(ValidationResponse.From(validationResult));
+
+            try
             {
-                if (id != objetoDto.Id)
-                    return BadRequest("El ID del post no coincide.");
+                var usuario = await _usuarioService.GetUsuarioByIdAsync(objetoDto.IdUsuarioRegistro);
+                if (usuario == null || !usuario.Estado)
+                    return BadRequest(new { message = "El usuario que registra el objeto no existe o está inactivo." });
 
-                // Validar el DTO
-                var validationResult = await _actualizarValidator.ValidateAsync(objetoDto);
-                if (!validationResult.IsValid)
-                    return BadRequest(ValidationResponse.From(validationResult));
+                var categoria = await _categoriaService.GetCategoriaByIdAsync(objetoDto.IdCategoria);
+                if (categoria == null || !categoria.Estado)
+                    return BadRequest(new { message = "La categoría no existe o está inactiva." });
 
-                try
-                {
-                    var usuario = await _usuarioService.GetUsuarioByIdAsync(objetoDto.IdUsuarioRegistro);
-                    if (usuario == null || !usuario.Estado)
-                        return BadRequest(new { message = "El usuario que registra el objeto no existe o está inactivo." });
+                var lugar = await _lugarService.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
+                if (lugar == null || !lugar.Estado)
+                    return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
 
-                    var categoria = await _categoriaService.GetCategoriaByIdAsync(objetoDto.IdCategoria);
-                    if (categoria == null || !categoria.Estado)
-                        return BadRequest(new { message = "La categoría no existe o está inactiva." });
+                var objeto = _mapper.Map<Objeto>(objetoDto);
+                await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
 
-                    var lugar = await _lugarService.GetLugarByIdAsync(objetoDto.IdLugarAlmacenamiento);
-                    if (lugar == null || !lugar.Estado)
-                        return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
+                // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
+                var actualizado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
+                var resultDto = _mapper.Map<ObjetoDto>(actualizado);
 
-                    var objeto = _mapper.Map<Objeto>(objetoDto);
-                    await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
-
-                    // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
-                    var actualizado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
-                    var resultDto = _mapper.Map<ObjetoDto>(actualizado);
-
-                    return StatusCode(200, new ApiResponse<ObjetoDto>(resultDto, "Objeto actualizado correctamente."));
-                }
-                catch (Exception ex)
-                {
-                    return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
-                }
+                return Ok(new ApiResponse<ObjetoDto>(resultDto, "Objeto actualizado correctamente."));
             }
+            catch (BusinessException ex)
+            {
+                return StatusCode((int)ex.StatusCode, new { message = ex.Message, errors = ex.Details });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error al actualizar el objeto", error = ex.Message });
+            }
+        }
 
-            [HttpDelete("dto/mapper/{id}")]
+        [HttpDelete("dto/mapper/{id}")]
             public async Task<IActionResult> DeletePostDtoMapper(uint id, [FromQuery] uint idUsuarioAdmin)
             {
                 // Validar que el ID sea válido

@@ -75,19 +75,39 @@ namespace ObjetosPerdidosUCB.Services.Service
         {
             await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
-            var existente = await _objetoQueryRepository.GetObjetoByIdAsync(objeto.Id);
+            var existente = await _objetoQueryRepository.GetObjetoParaActualizarAsync(objeto.Id);
             if (existente == null)
                 throw new BusinessException("El objeto no existe.", HttpStatusCode.NotFound);
+
+            if (objeto.Detalle == null)
+                throw new BusinessException("El detalle del objeto es obligatorio.");
 
             ValidarCamposObligatorios(objeto);
             await ValidarReferenciasAsync(objeto);
 
             if (await _objetoQueryRepository.ExistsCodigoAsync(objeto.Codigo, objeto.Id))
-                throw new BusinessException($"Ya existe otro objeto con el código {objeto.Codigo}.", HttpStatusCode.Conflict);
+                throw new BusinessException(
+                    $"Ya existe otro objeto con el código {objeto.Codigo}.",
+                    HttpStatusCode.Conflict);
 
-            await _objetoRepository.Update(objeto);
+            // Objeto
+            existente.Codigo = objeto.Codigo;
+            existente.Nombre = objeto.Nombre;
+            existente.Descripcion = objeto.Descripcion;
+            existente.Imagen = objeto.Imagen;
+            existente.IdCategoria = objeto.IdCategoria;
+
+            // Detalle (si por algún motivo no existía, se crea)
+            existente.Detalle ??= new Detalleobjeto { IdObjeto = existente.Id };
+            existente.Detalle.LugarEncontrado = objeto.Detalle.LugarEncontrado;
+            existente.Detalle.FechaEncontrada = objeto.Detalle.FechaEncontrada;
+            existente.Detalle.FechaEntrega = objeto.Detalle.FechaEntrega;
+            existente.Detalle.DetalleVerificacion = objeto.Detalle.DetalleVerificacion;
+            existente.Detalle.IdLugarAlmacenamiento = objeto.Detalle.IdLugarAlmacenamiento;
+            existente.Detalle.IdUsuarioRegistro = objeto.Detalle.IdUsuarioRegistro;
+
+            await _objetoQueryRepository.UpdateObjetoAsync(existente);
         }
-
         public async Task DeleteObjeto(uint id, uint idUsuarioAdmin)
         {
             await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
