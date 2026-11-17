@@ -5,11 +5,11 @@ using ObjetosPerdidosUCB.Infrastructure.Data;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
-    public class LugarAlmacenamientoRepository : ILugarAlmacenamientoRepository
+    public class LugarAlmacenamientoRepository : BaseRepository<LugarAlmacenamiento>, ILugarAlmacenamientoRepository
     {
         private readonly ObjetosPerdidosContext _context;
 
-        public LugarAlmacenamientoRepository(ObjetosPerdidosContext context)
+        public LugarAlmacenamientoRepository(ObjetosPerdidosContext context): base(context)
         {
             _context = context;
         }

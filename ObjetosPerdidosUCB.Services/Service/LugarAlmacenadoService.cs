@@ -9,40 +9,38 @@ namespace ObjetosPerdidosUCB.Services.Service
 {
     public class LugarAlmacenadoService : ILugarAlmacenamientoService
     {
-        private readonly IBaseRepository<LugarAlmacenamiento> _lugarRepository;
-        private readonly ILugarAlmacenamientoRepository _lugarQueryRepository;
+        //private readonly IBaseRepository<LugarAlmacenamiento> _lugarRepository;
+        //private readonly ILugarAlmacenamientoRepository _lugarQueryRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public LugarAlmacenadoService(
-            IBaseRepository<LugarAlmacenamiento> lugarRepository,
-            ILugarAlmacenamientoRepository lugarQueryRepository)
+        public LugarAlmacenadoService(IUnitOfWork unitOfWork)
         {
-            _lugarRepository = lugarRepository;
-            _lugarQueryRepository = lugarQueryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<LugarAlmacenamiento>> GetAllLugaresAsync(bool soloActivos)
         {
-            return await _lugarQueryRepository.GetAllLugaresAsync(soloActivos);
+            return await _unitOfWork.LugarAlmacenamientoRepository.GetAllLugaresAsync(soloActivos);
         }
 
         public async Task<LugarAlmacenamiento?> GetLugarByIdAsync(uint id)
         {
-            return await _lugarRepository.GetById(id);
+            return await _unitOfWork.LugarAlmacenamientoRepository.GetById(id);
         }
 
         public async Task InsertLugarAlmacenamiento(LugarAlmacenamiento lugar)
         {
-            await _lugarRepository.Add(lugar);
+            await _unitOfWork.LugarAlmacenamientoRepository.Add(lugar);
         }
 
         public async Task UpdateLugarAlmacenamiento(LugarAlmacenamiento lugar)
         {
-            await _lugarRepository.Update(lugar);
+            await _unitOfWork.LugarAlmacenamientoRepository.Update(lugar);
         }
 
         public async Task DeleteLugarAlmacenamiento(uint id)
         {
-            await _lugarRepository.Delete(id);
+            await _unitOfWork.LugarAlmacenamientoRepository.Delete(id);
         }
     }
 }

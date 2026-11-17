@@ -2,7 +2,7 @@
 
 namespace ObjetosPerdidosUCB.Core.Interfaces
 {
-    public interface IObjetoRepository
+    public interface IObjetoRepository : IBaseRepository<Objeto>
     {
         Task<IEnumerable<Objeto>> SearchObjetosAsync(
             string? texto,

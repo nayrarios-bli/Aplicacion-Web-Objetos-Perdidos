@@ -11,36 +11,33 @@ namespace ObjetosPerdidosUCB.Services.Service
 {
     public class ReclamoService : IReclamoService
     {
-        private readonly IBaseRepository<Reclamo> _reclamoRepository;
-        private readonly IReclamoRepository _reclamoQueryRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IUsuarioService _usuarioService;
         private readonly IObjetoService _objetoService;
 
         public ReclamoService(
-            IBaseRepository<Reclamo> reclamoRepository,
-            IReclamoRepository reclamoQueryRepository,
+            IUnitOfWork unitOfWork,
             IUsuarioService usuarioService,
             IObjetoService objetoService)
         {
-            _reclamoRepository = reclamoRepository;
-            _reclamoQueryRepository = reclamoQueryRepository;
+            _unitOfWork = unitOfWork;
             _usuarioService = usuarioService;
             _objetoService = objetoService;
         }
 
         public async Task<IEnumerable<Reclamo>> GetAllReclamosAsync()
         {
-            return await _reclamoQueryRepository.GetAllReclamosAsync();
+            return await _unitOfWork.ReclamoRepository.GetAllReclamosAsync();
         }
 
         public async Task<bool> ExistsPendienteAsync(uint idObjeto, uint idUsuario)
         {
-            return await _reclamoQueryRepository.ExistsPendienteAsync(idObjeto, idUsuario);
+            return await _unitOfWork.ReclamoRepository.ExistsPendienteAsync(idObjeto, idUsuario);
         }
 
         public async Task<Reclamo?> GetReclamoByIdAsync(uint id)
         {
-            return await _reclamoRepository.GetById(id);
+            return await _unitOfWork.ReclamoRepository.GetById(id);
         }
 
         public async Task InsertReclamo(Reclamo reclamo)
@@ -56,20 +53,20 @@ namespace ObjetosPerdidosUCB.Services.Service
             if (objeto == null)
                 throw new BusinessException("El objeto no existe o no está disponible.", HttpStatusCode.NotFound);
 
-            if (await _reclamoQueryRepository.ExistsPendienteAsync(reclamo.IdObjeto, reclamo.IdUsuario))
+            if (await _unitOfWork.ReclamoRepository.ExistsPendienteAsync(reclamo.IdObjeto, reclamo.IdUsuario))
                 throw new BusinessException("Ya tienes un reclamo pendiente para este objeto.", HttpStatusCode.Conflict);
 
             reclamo.Estado = "pendiente";
             reclamo.FechaEmitida = DateTime.Now;
 
-            await _reclamoRepository.Add(reclamo);
+            await _unitOfWork.ReclamoRepository.Add(reclamo);
         }
 
         public async Task UpdateReclamo(Reclamo reclamo, uint idUsuarioAdmin)
         {
             await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
-            var existente = await _reclamoRepository.GetById(reclamo.Id);
+            var existente = await _unitOfWork.ReclamoRepository.GetById(reclamo.Id);
             if (existente == null)
                 throw new BusinessException("El reclamo no existe.", HttpStatusCode.NotFound);
 
@@ -78,14 +75,14 @@ namespace ObjetosPerdidosUCB.Services.Service
             existente.IdRevisor = idUsuarioAdmin;
             existente.FechaRevisada = DateTime.Now;
 
-            await _reclamoRepository.Update(existente);
+            await _unitOfWork.ReclamoRepository.Update(existente);
         }
 
         public async Task MarcarEntregadoAsync(uint idReclamo, uint idUsuarioAdmin)
         {
             await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
-            var reclamo = await _reclamoRepository.GetById(idReclamo);
+            var reclamo = await _unitOfWork.ReclamoRepository.GetById(idReclamo);
             if (reclamo == null)
                 throw new BusinessException("El reclamo no existe.", HttpStatusCode.NotFound);
 
@@ -101,11 +98,11 @@ namespace ObjetosPerdidosUCB.Services.Service
             await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
 
             reclamo.Estado = "entregado";
-            await _reclamoRepository.Update(reclamo);
+            await _unitOfWork.ReclamoRepository.Update(reclamo);
         }
         public async Task DeleteReclamo(uint id)
         {
-            await _reclamoRepository.Delete(id);
+            await _unitOfWork.ReclamoRepository.Delete(id);
         }
 
        

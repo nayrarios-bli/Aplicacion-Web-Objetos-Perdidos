@@ -2,7 +2,6 @@
 
 public class ReclamoDto
 {
-    public uint Id { get; set; }
     public string Justificacion { get; set; } = null!;
     public string FechaEmitida { get; set; } = null!;
     public string Estado { get; set; } = null!;

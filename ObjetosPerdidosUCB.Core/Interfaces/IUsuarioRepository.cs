@@ -2,7 +2,7 @@
 
 namespace ObjetosPerdidosUCB.Core.Interfaces
 {
-    public interface IUsuarioRepository
+    public interface IUsuarioRepository: IBaseRepository<Usuario>
     {
         Task<Usuario?> GetUsuarioByCorreoAsync(string correo);
         
