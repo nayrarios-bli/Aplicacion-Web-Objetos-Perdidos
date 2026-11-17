@@ -11,36 +11,27 @@ namespace ObjetosPerdidosUCB.Services.Service
 {
     public class ObjetoService : IObjetoService
     {
-        private readonly IBaseRepository<Objeto> _objetoRepository;
-        private readonly IObjetoRepository _objetoQueryRepository;
         private readonly IUsuarioService _usuarioService;
         private readonly ICategoriaService _categoriaService;
         private readonly ILugarAlmacenamientoService _lugarService;
 
+        public readonly IUnitOfWork _unitOfWork;
 
-        public ObjetoService(
-            IBaseRepository<Objeto> objetoRepository,
-            IObjetoRepository objetoQueryRepository,
-            IUsuarioService usuarioService,
-            ICategoriaService categoriaService,
-            ILugarAlmacenamientoService lugarService)
+
+        public ObjetoService(IUnitOfWork unitOfWork)
         {
-            _objetoRepository = objetoRepository;
-            _objetoQueryRepository = objetoQueryRepository;
-            _usuarioService = usuarioService;
-            _categoriaService = categoriaService;
-            _lugarService = lugarService;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<Objeto>> GetAllObjetosAsync()
         {
-            var objetos = await _objetoRepository.GetAll();
+            var objetos = await _unitOfWork.ObjetoRepository.GetAll();
             return objetos.Where(o => o.Estado);
         }
 
         public async Task<Objeto?> GetObjetoByIdAsync(uint id)
         {
-            var objeto = await _objetoQueryRepository.GetObjetoByIdAsync(id);
+            var objeto = await _unitOfWork.ObjetoRepository.GetObjetoByIdAsync(id);
             if (objeto == null || !objeto.Estado)
                 return null;
             return objeto;
@@ -49,12 +40,12 @@ namespace ObjetosPerdidosUCB.Services.Service
             string? texto, uint? idCategoria, uint? idLugarAlmacenamiento,
             string? lugarEncontrado, bool? soloDisponibles)
         {
-            return await _objetoQueryRepository.SearchObjetosAsync(
+            return await _unitOfWork.ObjetoRepository.SearchObjetosAsync(
                 texto, idCategoria, idLugarAlmacenamiento, lugarEncontrado, true);
         }
         public async Task<bool> ExistsCodigoAsync(string codigo)
         { 
-            return await _objetoQueryRepository.ExistsCodigoAsync(codigo);
+            return await _unitOfWork.ObjetoRepository.ExistsCodigoAsync(codigo);
         }
         public async Task InsertObjeto(Objeto objeto)
         {
@@ -65,17 +56,17 @@ namespace ObjetosPerdidosUCB.Services.Service
             ValidarCamposObligatorios(objeto);
             await ValidarReferenciasAsync(objeto);
 
-            if (await _objetoQueryRepository.ExistsCodigoAsync(objeto.Codigo))
+            if (await _unitOfWork.ObjetoRepository.ExistsCodigoAsync(objeto.Codigo))
                 throw new BusinessException($"Ya existe un objeto con el código {objeto.Codigo}.", HttpStatusCode.Conflict);
 
             objeto.Estado = true;
-            await _objetoRepository.Add(objeto);
+            await _unitOfWork.ObjetoRepository.Add(objeto);
         }
         public async Task UpdateObjeto(Objeto objeto, uint idUsuarioAdmin)
         {
             await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
-            var existente = await _objetoQueryRepository.GetObjetoParaActualizarAsync(objeto.Id);
+            var existente = await _unitOfWork.ObjetoRepository.GetObjetoParaActualizarAsync(objeto.Id);
             if (existente == null)
                 throw new BusinessException("El objeto no existe.", HttpStatusCode.NotFound);
 
@@ -85,7 +76,7 @@ namespace ObjetosPerdidosUCB.Services.Service
             ValidarCamposObligatorios(objeto);
             await ValidarReferenciasAsync(objeto);
 
-            if (await _objetoQueryRepository.ExistsCodigoAsync(objeto.Codigo, objeto.Id))
+            if (await _unitOfWork.ObjetoRepository.ExistsCodigoAsync(objeto.Codigo, objeto.Id))
                 throw new BusinessException(
                     $"Ya existe otro objeto con el código {objeto.Codigo}.",
                     HttpStatusCode.Conflict);
@@ -106,17 +97,17 @@ namespace ObjetosPerdidosUCB.Services.Service
             existente.Detalle.IdLugarAlmacenamiento = objeto.Detalle.IdLugarAlmacenamiento;
             existente.Detalle.IdUsuarioRegistro = objeto.Detalle.IdUsuarioRegistro;
 
-            await _objetoQueryRepository.UpdateObjetoAsync(existente);
+            await _unitOfWork.ObjetoRepository.UpdateObjetoAsync(existente);
         }
         public async Task DeleteObjeto(uint id, uint idUsuarioAdmin)
         {
             await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
-            var existente = await _objetoQueryRepository.GetObjetoByIdAsync(id);
+            var existente = await _unitOfWork.ObjetoRepository.GetObjetoByIdAsync(id);
             if (existente == null)
                 throw new BusinessException("El objeto no existe.", HttpStatusCode.NotFound);
 
-            await _objetoRepository.Delete(id);
+            await _unitOfWork.ObjetoRepository.Delete(id);
         }
 
         private static void ValidarCamposObligatorios(Objeto objeto)

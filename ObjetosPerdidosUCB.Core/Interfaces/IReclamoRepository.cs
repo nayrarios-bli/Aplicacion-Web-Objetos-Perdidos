@@ -2,7 +2,7 @@
 
 namespace ObjetosPerdidosUCB.Core.Interfaces
 {
-    public interface IReclamoRepository
+    public interface IReclamoRepository: IBaseRepository<Reclamo>
     {
         Task<IEnumerable<Reclamo>> GetAllReclamosAsync();
 

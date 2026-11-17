@@ -5,11 +5,11 @@ using ObjetosPerdidosUCB.Infrastructure.Data;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
-    public class ReclamoRepository : IReclamoRepository
+    public class ReclamoRepository : BaseRepository<Reclamo>, IReclamoRepository
     {
         private readonly ObjetosPerdidosContext _context;
 
-        public ReclamoRepository(ObjetosPerdidosContext context)
+        public ReclamoRepository(ObjetosPerdidosContext context): base(context)
         {
             _context = context;
         }

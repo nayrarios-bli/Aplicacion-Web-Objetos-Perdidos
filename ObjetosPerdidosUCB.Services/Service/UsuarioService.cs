@@ -10,49 +10,45 @@ namespace ObjetosPerdidosUCB.Services.Interfaces
 {
     public class UsuarioService : IUsuarioService
     {
-        private readonly IBaseRepository<Usuario> _usuarioRepository;
-        private readonly IUsuarioRepository _usuarioQueryRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UsuarioService(
-            IBaseRepository<Usuario> usuarioRepository,
-            IUsuarioRepository usuarioQueryRepository)
+        public UsuarioService(IUnitOfWork unitOfWork)
         {
-            _usuarioRepository = usuarioRepository;
-            _usuarioQueryRepository = usuarioQueryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<Usuario>> GetAllUsuariosAsync()
         {
-            return await _usuarioRepository.GetAll();
+            return await _unitOfWork.UsuarioRepository.GetAll();
         }
 
         public async Task<Usuario?> GetUsuarioByIdAsync(uint id)
         {
-            return await _usuarioRepository.GetById(id);
+            return await _unitOfWork.UsuarioRepository.GetById(id);
         }
 
         public async Task<Usuario?> GetUsuarioByCorreoAsync(string correo)
         {
-            return await _usuarioQueryRepository.GetUsuarioByCorreoAsync(correo);
+            return await _unitOfWork.UsuarioRepository.GetUsuarioByCorreoAsync(correo);
         }
 
         public async Task InsertUsuario(Usuario usuario)
         {
-            await _usuarioRepository.Add(usuario);
+            await _unitOfWork.UsuarioRepository.Add(usuario);
         }
 
         public async Task UpdateUsuario(Usuario usuario)
         {
-            await _usuarioRepository.Update(usuario);
+            await _unitOfWork.UsuarioRepository.Update(usuario);
         }
 
         public async Task DeleteUsuario(uint id)
         {
-            await _usuarioRepository.Delete(id);
+            await _unitOfWork.UsuarioRepository.Delete(id);
         }
         public async Task ValidarAdministradorAsync(uint idUsuario)
         {
-            var usuario = await _usuarioRepository.GetById(idUsuario);
+            var usuario = await _unitOfWork.UsuarioRepository.GetById(idUsuario);
 
             if (usuario == null || !usuario.Estado)
                 throw new BusinessException("El usuario no existe o está inactivo.", HttpStatusCode.NotFound);
