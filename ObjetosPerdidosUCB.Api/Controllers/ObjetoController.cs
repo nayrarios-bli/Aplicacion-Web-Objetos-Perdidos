@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
@@ -13,6 +14,7 @@ using System.Net;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ObjetoController : ControllerBase

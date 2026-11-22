@@ -2,8 +2,10 @@
 using ObjetosPerdidosUCB.Core.Excepctions;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Services.Interfaces;
+using ObjetosPerdidosUCB.Core.QueryFilters;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
 using System.Text;
 
@@ -135,6 +137,48 @@ namespace ObjetosPerdidosUCB.Services.Service
                 throw new BusinessException("El lugar de almacenamiento no existe o está inactivo.");
         }
 
+        public async Task<IEnumerable<Objeto>> GetAllObjetosByNombreAsync(string? texto, ObjetoQueryFilters? filters)
+        {
+            IEnumerable<Objeto> objetos;
+            if (texto != null)
+            {
+                objetos = await _unitOfWork.ObjetoRepository.GetObjetosByNombreAsync(texto);
+            }
+            else
+            {
+                objetos = await _unitOfWork.ObjetoRepository.GetAll();
+            }
+            
+            if (filters.idCategoria != null)
+            {
+                objetos = objetos.Where(x => x.IdCategoria.ToString() == Convert.ToString(filters.idCategoria));
+            }
+            if (filters.idLugarAlmacenamiento != null)
+            {
+                objetos = objetos.Where(x => x.Detalle.IdLugarAlmacenamiento.ToString() == Convert.ToString(filters.idLugarAlmacenamiento));
+            }
+            if (filters.lugarEncontrado != null)
+            {
+                objetos = objetos.Where(x => x.Detalle.LugarEncontrado.ToLower()
+                    .Contains(filters.lugarEncontrado.ToLower()));
+            }
+            if (filters.soloDisponibles != null)
+            {
+                objetos = objetos.Where(x => x.Estado == filters.soloDisponibles);
+            }
+            /*if (filters.Date != null)
+            {
+                string fechaAux = Procesos.ParseFechaFlexible(filters.Date);
+                if (fechaAux != null)
+                {
+                    objetos = objetos.Where(x => x.Date.ToShortDateString() ==
+                        Convert.ToDateTime(fechaAux).ToShortDateString());
+
+                }
+            }*/ // para añadir filtro por fecha
+
+            return objetos;
+        }
     }
 }
 

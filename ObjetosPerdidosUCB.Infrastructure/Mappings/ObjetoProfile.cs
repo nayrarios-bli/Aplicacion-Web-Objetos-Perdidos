@@ -28,6 +28,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Mappings
                 .ForMember(d => d.IdUsuarioRegistro,
                     o => o.MapFrom(s => ObjetoMapHelper.IdUsuarioRegistro(s.Detalle)));
 
+            CreateMap<Security, SecurityDto>().ReverseMap();
 
             // CU-02: CrearObjetoDto -> Objeto con su Detalle (se guardan juntos).
             CreateMap<CrearObjetoDto, Objeto>()

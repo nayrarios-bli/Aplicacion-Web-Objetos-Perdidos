@@ -11,7 +11,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         private readonly ObjetosPerdidosContext _context;
-        private readonly DbSet<T> _entities;
+        protected readonly DbSet<T> _entities;
         public BaseRepository(ObjetosPerdidosContext context)
         {
             _context = context;

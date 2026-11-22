@@ -12,6 +12,7 @@ namespace ObjetosPerdidosUCB.Core.Interfaces
         IObjetoRepository ObjetoRepository { get; }
         ICategoriaRepository CategoriaRepository { get; }
         ILugarAlmacenamientoRepository LugarAlmacenamientoRepository { get; }
+        ISecurityRepository SecurityRepository { get; }
         void SaveChanges();
         Task SaveChangesAsync();
     }

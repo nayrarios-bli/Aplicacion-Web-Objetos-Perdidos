@@ -16,6 +16,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         public readonly IObjetoRepository? _objetoRepository;
         public readonly ICategoriaRepository? _categoriaRepository;
         public readonly ILugarAlmacenamientoRepository? _lugarAlmacenamientoRepository;
+        private readonly ISecurityRepository _securityRepository;
 
         //Dapper
         //private readonly IDapperContext _dapper;
@@ -40,6 +41,9 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 
         public ILugarAlmacenamientoRepository LugarAlmacenamientoRepository =>
             _lugarAlmacenamientoRepository?? new LugarAlmacenamientoRepository(_context);
+
+        public ISecurityRepository SecurityRepository =>
+            _securityRepository ?? new SecurityRepository(_context);
 
         public void Dispose()
         {

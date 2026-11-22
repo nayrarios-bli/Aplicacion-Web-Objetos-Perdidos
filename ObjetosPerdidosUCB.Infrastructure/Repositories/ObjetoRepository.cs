@@ -7,20 +7,13 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
     public class ObjetoRepository : BaseRepository<Objeto>, IObjetoRepository
     {
-        private readonly ObjetosPerdidosContext _context;
-
+        ObjetosPerdidosContext _context;
         public ObjetoRepository(ObjetosPerdidosContext context): base(context)
         {
-            _context = context;
         }
         public async Task<Objeto?> GetObjetoByIdAsync(uint id)
         {
-            return await _context.Objetos
-                .AsNoTracking()
-                .Include(o => o.IdCategoriaNavigation)
-                .Include(o => o.Detalle)
-                    .ThenInclude(d => d!.IdLugarAlmacenamientoNavigation)
-                .FirstOrDefaultAsync(o => o.Id == id);
+            return await _entities.FindAsync(id);
         }
 
         public async Task<IEnumerable<Objeto>> SearchObjetosAsync(
@@ -49,7 +42,6 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             if (idCategoria.HasValue)
                 query = query.Where(o => o.IdCategoria == idCategoria.Value);
 
-            // CU-06: filtrar por lugar de almacenamiento
             if (idLugarAlmacenamiento.HasValue)
                 query = query.Where(o => o.Detalle != null &&
                                          o.Detalle.IdLugarAlmacenamiento == idLugarAlmacenamiento.Value);
@@ -67,8 +59,6 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
                 .OrderByDescending(o => o.Id)
                 .ToListAsync();
         }
-
-        
 
         public async Task<bool> ExistsCodigoAsync(string codigo, uint? excludeId = null)
         {
@@ -89,5 +79,9 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<Objeto>> GetObjetosByNombreAsync(string texto)
+        {
+            return await _entities.Where(x => x.Nombre.ToLower() == texto.ToLower()).ToListAsync();
+        }
     }
 }
