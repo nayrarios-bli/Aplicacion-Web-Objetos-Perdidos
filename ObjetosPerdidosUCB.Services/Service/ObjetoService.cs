@@ -38,13 +38,6 @@ namespace ObjetosPerdidosUCB.Services.Service
                 return null;
             return objeto;
         }
-        public async Task<IEnumerable<Objeto>> SearchObjetosAsync(
-            string? texto, uint? idCategoria, uint? idLugarAlmacenamiento,
-            string? lugarEncontrado, bool? soloDisponibles)
-        {
-            return await _unitOfWork.ObjetoRepository.SearchObjetosAsync(
-                texto, idCategoria, idLugarAlmacenamiento, lugarEncontrado, true);
-        }
         public async Task<bool> ExistsCodigoAsync(string codigo)
         { 
             return await _unitOfWork.ObjetoRepository.ExistsCodigoAsync(codigo);
@@ -66,7 +59,8 @@ namespace ObjetosPerdidosUCB.Services.Service
         }
         public async Task UpdateObjeto(Objeto objeto, uint idUsuarioAdmin)
         {
-            await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
+            //ya no necesitamos validar el usuario manualmente
+            //await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
             var existente = await _unitOfWork.ObjetoRepository.GetObjetoParaActualizarAsync(objeto.Id);
             if (existente == null)
@@ -137,25 +131,25 @@ namespace ObjetosPerdidosUCB.Services.Service
                 throw new BusinessException("El lugar de almacenamiento no existe o está inactivo.");
         }
 
-        public async Task<IEnumerable<Objeto>> GetAllObjetosByNombreAsync(string? texto, ObjetoQueryFilters? filters)
+        public async Task<IEnumerable<Objeto>> GetAllObjetosByNombreAsync(ObjetoQueryFilters? filters)
         {
             IEnumerable<Objeto> objetos;
-            if (texto != null)
+            if (filters.texto != null)
             {
-                objetos = await _unitOfWork.ObjetoRepository.GetObjetosByNombreAsync(texto);
+                objetos = await _unitOfWork.ObjetoRepository.GetObjetosByNombreAsync(filters.texto);
             }
             else
             {
                 objetos = await _unitOfWork.ObjetoRepository.GetAll();
             }
             
-            if (filters.idCategoria != null)
+            if (filters.categoria != null)
             {
-                objetos = objetos.Where(x => x.IdCategoria.ToString() == Convert.ToString(filters.idCategoria));
+                objetos = objetos.Where(x => x.IdCategoriaNavigation.Nombre == filters.categoria);
             }
-            if (filters.idLugarAlmacenamiento != null)
+            if (filters.lugarAlmacenamiento != null)
             {
-                objetos = objetos.Where(x => x.Detalle.IdLugarAlmacenamiento.ToString() == Convert.ToString(filters.idLugarAlmacenamiento));
+                objetos = objetos.Where(x => x.Detalle.IdLugarAlmacenamientoNavigation.Nombre == filters.lugarAlmacenamiento);
             }
             if (filters.lugarEncontrado != null)
             {

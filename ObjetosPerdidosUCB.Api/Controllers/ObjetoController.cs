@@ -6,8 +6,10 @@ using Microsoft.EntityFrameworkCore;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
+using ObjetosPerdidosUCB.Core.Enums;
 using ObjetosPerdidosUCB.Core.Excepctions;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Core.QueryFilters;
 using ObjetosPerdidosUCB.Services.Interfaces;
 using ObjetosPerdidosUCB.Services.Validators.Objetos;
 using System.Net;
@@ -53,33 +55,18 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         /// Ejemplo: GET api/Objeto?texto=laptop&amp;idCategoria=1&amp;soloDisponibles=true
         /// </summary>
         [HttpGet("dto/mapper/buscar")]
-        public async Task<IActionResult> BuscarObjetos(
-            [FromQuery] string? texto,
-            [FromQuery] uint? idCategoria,
-            [FromQuery] uint? idLugarAlmacenamiento,
-            [FromQuery] string? lugarEncontrado,
-            [FromQuery] bool? soloDisponibles)
+        public async Task<IActionResult> FiltrarObjetos([FromQuery] ObjetoQueryFilters? filters)
         {
-            try
-            {
-                var objetos = await _objetoService.SearchObjetosAsync(
-                    texto, idCategoria, idLugarAlmacenamiento, lugarEncontrado, soloDisponibles);
+            var objetos = await _objetoService.GetAllObjetosByNombreAsync(filters);
+            var objetoDto = _mapper.Map<IEnumerable<ObjetoDto>>(objetos);
+            
+            var response = new ApiResponse
+                <IEnumerable<ObjetoDto>>(objetoDto);
 
-                var objetosDto = _mapper.Map<IEnumerable<ObjetoDto>>(objetos).ToList();
-
-                var mensaje = objetosDto.Count == 0
-                    ? "No se encontraron objetos que coincidan con la búsqueda."
-                    : null;
-
-                return Ok(new ApiResponse<IEnumerable<ObjetoDto>>(objetosDto, mensaje));
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { message = "Error al consultar los objetos", error = ex.Message });
-            }
+            return Ok(response);
         }
-        [HttpGet("dto/mapper")]
 
+        [HttpGet("dto/mapper")]
         public async Task<IActionResult> GetObjetoDtoMapper()
         {
             var objetos = await _objetoService.GetAllObjetosAsync();
@@ -93,6 +80,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         }
 
         /// <summary>CU-05 Consultar detalle del objeto.</summary>
+        [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetObjetoById(uint id)
         {
@@ -114,6 +102,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         }
 
         /// <summary>CU-02 Registrar objeto encontrado.</summary>
+        [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpPost("dto/mapper/")]
         public async Task<IActionResult> InsertObjeto([FromBody] CrearObjetoDto objetoDto)
         {
@@ -155,11 +144,13 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 return StatusCode(500, new { message = "Error al registrar el objeto", error = ex.Message });
             }
         }
+
+        [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpPut("dto/mapper/{id}")]
         public async Task<IActionResult> UpdateObjeto(
-uint id,
-[FromBody] ActualizarObjetoDto objetoDto,
-[FromQuery] uint idUsuarioAdmin)
+            uint id,
+            [FromBody] ActualizarObjetoDto objetoDto,
+            [FromQuery] uint idUsuarioAdmin)
         {
             if (id == 0)
                 return BadRequest(new { message = "El ID debe ser mayor que cero." });
@@ -204,6 +195,7 @@ uint id,
             }
         }
 
+        [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpDelete("dto/mapper/{id}")]
             public async Task<IActionResult> DeletePostDtoMapper(uint id, [FromQuery] uint idUsuarioAdmin)
             {

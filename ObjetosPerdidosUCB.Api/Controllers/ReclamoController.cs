@@ -1,14 +1,18 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ObjetosPerdidosUCB.Api.Controllers.Response;
 using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
+using ObjetosPerdidosUCB.Core.Enums;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Core.QueryFilters;
 using ObjetosPerdidosUCB.Services.Interfaces;
 using ObjetosPerdidosUCB.Services.Validators.Reclamos;
 
 namespace ObjetosPerdidosUCB.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReclamoController : ControllerBase
@@ -33,14 +37,16 @@ namespace ObjetosPerdidosUCB.Api.Controllers
             _crearValidator = crearValidator;
         }
 
+        [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpGet("dto/mapper")]
-        public async Task<IActionResult> GetReclamos()
+        public async Task<IActionResult> GetReclamos([FromQuery] ReclamoQueryFilters? filters)
         {
-            var reclamos = await _reclamoService.GetAllReclamosAsync();
+            var reclamos = await _reclamoService.GetAllReclamosAsync(filters);
             var reclamosDto = _mapper.Map<IEnumerable<ReclamoDto>>(reclamos);
             return Ok(new ApiResponse<IEnumerable<ReclamoDto>>(reclamosDto));
         }
 
+        [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpGet("dto/mapper/{id}")]
         public async Task<IActionResult> GetReclamoById(uint id)
         {

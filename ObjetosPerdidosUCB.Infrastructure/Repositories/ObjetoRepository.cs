@@ -16,50 +16,6 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             return await _entities.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Objeto>> SearchObjetosAsync(
-            string? texto,
-            uint? idCategoria,
-            uint? idLugarAlmacenamiento,
-            string? lugarEncontrado,
-            bool? soloDisponibles)
-        {
-            var query = _context.Objetos
-                .AsNoTracking()
-                .Include(o => o.IdCategoriaNavigation)
-                .Include(o => o.Detalle)
-                    .ThenInclude(d => d!.IdLugarAlmacenamientoNavigation)
-                .AsQueryable();
-
-            if (!string.IsNullOrWhiteSpace(texto))
-            {
-                var t = texto.Trim();
-                query = query.Where(o =>
-                    o.Nombre.Contains(t) ||
-                    o.Descripcion.Contains(t) ||
-                    o.Codigo.Contains(t));
-            }
-
-            if (idCategoria.HasValue)
-                query = query.Where(o => o.IdCategoria == idCategoria.Value);
-
-            if (idLugarAlmacenamiento.HasValue)
-                query = query.Where(o => o.Detalle != null &&
-                                         o.Detalle.IdLugarAlmacenamiento == idLugarAlmacenamiento.Value);
-
-            if (!string.IsNullOrWhiteSpace(lugarEncontrado))
-            {
-                var le = lugarEncontrado.Trim();
-                query = query.Where(o => o.Detalle != null && o.Detalle.LugarEncontrado.Contains(le));
-            }
-
-            if (soloDisponibles == true)
-                query = query.Where(o => o.Estado);
-
-            return await query
-                .OrderByDescending(o => o.Id)
-                .ToListAsync();
-        }
-
         public async Task<bool> ExistsCodigoAsync(string codigo, uint? excludeId = null)
         {
             return await _context.Objetos.AnyAsync(o => 

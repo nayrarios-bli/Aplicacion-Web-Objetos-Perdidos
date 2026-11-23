@@ -8,9 +8,9 @@ namespace ObjetosPerdidosUCB.Core.QueryFilters
     {
         public string? texto { get; set; }
 
-        public uint? idCategoria { get; set; }
+        public string? categoria { get; set; }
 
-        public uint? idLugarAlmacenamiento { get; set; }
+        public string? lugarAlmacenamiento { get; set; }
         public string? lugarEncontrado { get; set; }
         public bool? soloDisponibles { get; set; }
     }

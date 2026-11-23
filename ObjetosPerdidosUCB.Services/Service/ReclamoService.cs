@@ -1,6 +1,7 @@
 ﻿using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Excepctions;
 using ObjetosPerdidosUCB.Core.Interfaces;
+using ObjetosPerdidosUCB.Core.QueryFilters;
 using ObjetosPerdidosUCB.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,9 +26,31 @@ namespace ObjetosPerdidosUCB.Services.Service
             _objetoService = objetoService;
         }
 
-        public async Task<IEnumerable<Reclamo>> GetAllReclamosAsync()
+        public async Task<IEnumerable<Reclamo>> GetAllReclamosAsync(ReclamoQueryFilters? filters)
         {
-            return await _unitOfWork.ReclamoRepository.GetAllReclamosAsync();
+            IEnumerable<Reclamo> reclamos;
+            reclamos = await _unitOfWork.ReclamoRepository.GetAllReclamosAsync();
+
+            if (filters.FechaEmitida != null)
+            {
+                reclamos = reclamos.Where(x => x.FechaEmitida.ToShortDateString() ==
+                    Convert.ToDateTime(filters.FechaEmitida).ToShortDateString());
+
+            }
+            if (filters.Estado != null)
+            {
+                reclamos = reclamos.Where(x => x.Estado == filters.Estado);
+            }
+            if (filters.objeto != null)
+            {
+                reclamos = reclamos.Where(x => x.IdObjetoNavigation.Nombre == filters.objeto);
+            }
+            if (filters.usuario != null)
+            {
+                reclamos = reclamos.Where(x => x.IdUsuarioNavigation.Nombre == filters.usuario);
+            }
+
+            return reclamos;
         }
 
         public async Task<bool> ExistsPendienteAsync(uint idObjeto, uint idUsuario)

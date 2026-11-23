@@ -6,8 +6,8 @@ namespace ObjetosPerdidosUCB.Core.Enums
 {
     public enum RoleType
     {
-        Administrator,
-        Consumer
+        Administrador,
+        Usuario
     }
 
 }
