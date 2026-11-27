@@ -59,5 +59,9 @@ namespace ObjetosPerdidosUCB.Services.Interfaces
                     HttpStatusCode.Forbidden);
         }
 
+        public async Task<Usuario> GetLoginByCredentials(UserLogin userLogin)
+        {
+            return await _unitOfWork.UsuarioRepository.GetLoginByCredentials(userLogin);
+        }
     }
 }

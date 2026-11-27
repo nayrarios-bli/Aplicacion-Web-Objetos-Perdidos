@@ -14,13 +14,13 @@ namespace ObjetosPerdidosUCB.Api.Controllers
     public class TokenController : ControllerBase // conexion con appsetings (datos de bd y tokens)
     {
             private readonly IConfiguration _configuration;
-            private readonly ISecurityService _securityService;
+            private readonly IUsuarioService _usuarioService;
 
             public TokenController(IConfiguration configuration,
-                ISecurityService securityService)
+                IUsuarioService usuarioService)
             {
                 _configuration = configuration;
-                _securityService = securityService;
+                _usuarioService = usuarioService;
             }
 
             [HttpPost]
@@ -39,7 +39,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
             private async Task<(bool, Security)> IsValidUser(UserLogin login)
             {
-                var user = await _securityService.GetLoginByCredentials(login);
+                var user = await _usuarioService.GetLoginByCredentials(login);
                 return (user != null, user);
             }
 

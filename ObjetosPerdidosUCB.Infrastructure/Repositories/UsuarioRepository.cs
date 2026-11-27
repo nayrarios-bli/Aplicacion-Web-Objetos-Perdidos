@@ -14,7 +14,11 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
             _context = context;
         }
 
-       
+        public async Task<Usuario> GetLoginByCredentials(UserLogin login)
+        {
+            return await _entities.FirstOrDefaultAsync(x => x.Nombre == login.User
+            && x.Contrasena == login.Password);
+        }
 
         public async Task<Usuario?> GetUsuarioByCorreoAsync(string correo)
         {

@@ -9,4 +9,5 @@ public interface IUsuarioService
     Task UpdateUsuario(Usuario objeto);
     Task DeleteUsuario(uint objeto);
     Task ValidarAdministradorAsync(uint idUsuario);
+    Task<Usuario> GetLoginByCredentials(UserLogin userLogin);
 }

@@ -10,6 +10,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         ObjetosPerdidosContext _context;
         public ObjetoRepository(ObjetosPerdidosContext context): base(context)
         {
+            _context = context;
         }
         public async Task<Objeto?> GetObjetoByIdAsync(uint id)
         {
