@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Text;
+using ObjetosPerdidosUCB.Core.DTOs;
 
 namespace ObjetosPerdidosUCB.Services.Service
 {
@@ -37,7 +38,7 @@ namespace ObjetosPerdidosUCB.Services.Service
             return objetos.Where(o => o.Estado);
         }
 
-        public async Task<Objeto?> GetObjetoByIdAsync(uint id)
+        public async Task<ObjetoDto?> GetDetalleAsync(uint id)
         {
             var objeto = await _unitOfWork.ObjetoRepository.GetObjetoByIdAsync(id);
             if (objeto == null || !objeto.Estado)

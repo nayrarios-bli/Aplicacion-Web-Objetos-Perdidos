@@ -1,20 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ObjetosPerdidosUCB.Core.DTOs;
 using ObjetosPerdidosUCB.Core.Entities;
 using ObjetosPerdidosUCB.Core.Interfaces;
 using ObjetosPerdidosUCB.Infrastructure.Data;
+using ObjetosPerdidosUCB.Infrastructure.Queries;
 
 namespace ObjetosPerdidosUCB.Infrastructure.Repositories
 {
     public class ObjetoRepository : BaseRepository<Objeto>, IObjetoRepository
     {
-        ObjetosPerdidosContext _context;
-        public ObjetoRepository(ObjetosPerdidosContext context): base(context)
+        private readonly ObjetosPerdidosContext _context;
+        private readonly IDapperContext _dapper;
+        public ObjetoRepository(ObjetosPerdidosContext context, IDapperContext dapper): base(context)
         {
             _context = context;
+            _dapper= dapper;
         }
-        public async Task<Objeto?> GetObjetoByIdAsync(uint id)
+        public async Task<ObjetoDto?> GetObjetoByIdAsync(uint id)
         {
-            return await _entities.FindAsync(id);
+            return await _dapper.QueryFirstOrDefaultAsync<ObjetoDto>
+                (ObjetoQuery.DetallePorId, new { Id = id }); 
         }
 
         public async Task<bool> ExistsCodigoAsync(string codigo, uint? excludeId = null)

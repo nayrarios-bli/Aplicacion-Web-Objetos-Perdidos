@@ -13,6 +13,7 @@ using ObjetosPerdidosUCB.Services.Service;
 using ObjetosPerdidosUCB.Services.Validators.Objetos;
 using ObjetosPerdidosUCB.Services.Validators.Reclamos;
 using ObjetosPerdidosUCB.Services.Validators.Usuarios;
+using SocialMedia.Core.Interfaces;
 
 namespace ObjetosPerdidosUCB.Api
 {
@@ -41,6 +42,8 @@ namespace ObjetosPerdidosUCB.Api
             builder.Services.AddTransient<ILugarAlmacenamientoService, LugarAlmacenadoService>();
             builder.Services.AddTransient<ISecurityService, SecurityService>();
             builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddSingleton<IDbConnectionFactory, DbConnectionFactory>();
+            builder.Services.AddScoped<IDapperContext, DapperContext>();
 
             builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
             {

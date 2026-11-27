@@ -89,11 +89,12 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
             try
             {
-                var objeto = await _objetoService.GetObjetoByIdAsync(id);
-                if (objeto == null)
+                var detalle = await _objetoService.GetDetalleAsync(id);
+
+                if (detalle == null)
                     return NotFound(new { message = "Objeto no encontrado." });
 
-                return Ok(new ApiResponse<ObjetoDto>(_mapper.Map<ObjetoDto>(objeto)));
+                return Ok(new ApiResponse<ObjetoDto>(detalle));
             }
             catch (Exception ex)
             {
