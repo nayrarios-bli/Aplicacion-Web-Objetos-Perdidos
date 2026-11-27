@@ -90,6 +90,7 @@ namespace ObjetosPerdidosUCB.Services.Service
             existente.Descripcion = objeto.Descripcion;
             existente.Imagen = objeto.Imagen;
             existente.IdCategoria = objeto.IdCategoria;
+            existente.Estado = objeto.Estado;
 
             // Detalle (si por algún motivo no existía, se crea)
             existente.Detalle ??= new Detalleobjeto { IdObjeto = existente.Id };
@@ -140,16 +141,9 @@ namespace ObjetosPerdidosUCB.Services.Service
 
         public async Task<IEnumerable<Objeto>> GetAllObjetosByNombreAsync(ObjetoQueryFilters? filters)
         {
-            IEnumerable<Objeto> objetos;
-            if (filters.texto != null)
-            {
-                objetos = await _unitOfWork.ObjetoRepository.GetObjetosByNombreAsync(filters.texto);
-            }
-            else
-            {
-                objetos = await _unitOfWork.ObjetoRepository.GetAll();
-            }
-            
+            filters ??= new ObjetoQueryFilters();
+            var objetos = await _unitOfWork.ObjetoRepository.GetObjetosParaFiltrarAsync();
+
             if (filters.categoria != null)
             {
                 objetos = objetos.Where(x => x.IdCategoriaNavigation.Nombre == filters.categoria);

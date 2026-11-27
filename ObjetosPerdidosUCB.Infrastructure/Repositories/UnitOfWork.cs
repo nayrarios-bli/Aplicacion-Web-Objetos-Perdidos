@@ -17,15 +17,13 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         public readonly ICategoriaRepository? _categoriaRepository;
         public readonly ILugarAlmacenamientoRepository? _lugarAlmacenamientoRepository;
         private readonly ISecurityRepository _securityRepository;
-
-        //Dapper
-        //private readonly IDapperContext _dapper;
+        private readonly IDapperContext _dapper;
         private IDbContextTransaction? _efTransaction;
 
-        public UnitOfWork(ObjetosPerdidosContext context)//, IDapperContext dapper)
+        public UnitOfWork(ObjetosPerdidosContext context, IDapperContext dapper)
         {
             _context = context;
-            //_dapper = dapper;
+            _dapper = dapper;
         }
 
         public IUsuarioRepository UsuarioRepository =>
@@ -34,7 +32,7 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         public IReclamoRepository ReclamoRepository =>
             _reclamoRespository ?? new ReclamoRepository(_context);
         public IObjetoRepository ObjetoRepository =>
-            _objetoRepository ?? new ObjetoRepository(_context);
+            _objetoRepository ?? new ObjetoRepository(_context , _dapper);
 
         public ICategoriaRepository CategoriaRepository =>
             _categoriaRepository?? new CategoriaRepository(_context);

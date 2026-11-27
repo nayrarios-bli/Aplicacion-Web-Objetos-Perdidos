@@ -45,5 +45,15 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         {
             return await _entities.Where(x => x.Nombre.ToLower() == texto.ToLower()).ToListAsync();
         }
+
+        public async Task<IEnumerable<Objeto>> GetObjetosParaFiltrarAsync()
+        {
+            return await _context.Objetos
+                .AsNoTracking()
+                .Include(o => o.IdCategoriaNavigation)
+                .Include(o => o.Detalle)
+                    .ThenInclude(d => d!.IdLugarAlmacenamientoNavigation)
+                .ToListAsync();
+        }
     }
 }

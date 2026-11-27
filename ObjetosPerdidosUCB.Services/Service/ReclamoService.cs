@@ -72,7 +72,7 @@ namespace ObjetosPerdidosUCB.Services.Service
             if (usuario == null || !usuario.Estado)
                 throw new BusinessException("El usuario no existe o está inactivo.");
 
-            var objeto = await _objetoService.GetObjetoByIdAsync(reclamo.IdObjeto);
+            var objeto = await _objetoService.GetDetalleAsync(reclamo.IdObjeto);
             if (objeto == null)
                 throw new BusinessException("El objeto no existe o no está disponible.", HttpStatusCode.NotFound);
 
@@ -113,12 +113,12 @@ namespace ObjetosPerdidosUCB.Services.Service
                 throw new BusinessException(
                     "El administrador debe verificar que el reclamante es el propietario antes de entregar el objeto.");
 
-            var objeto = await _objetoService.GetObjetoByIdAsync(reclamo.IdObjeto);
+            var objeto = await _objetoService.GetDetalleAsync(reclamo.IdObjeto);
             if (objeto == null)
                 throw new BusinessException("El objeto no existe o ya no está disponible.", HttpStatusCode.NotFound);
 
             objeto.Estado = false;
-            await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
+            await _objetoService.UpdateObjeto(objeto);
 
             reclamo.Estado = "entregado";
             await _unitOfWork.ReclamoRepository.Update(reclamo);

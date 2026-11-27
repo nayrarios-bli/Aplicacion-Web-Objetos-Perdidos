@@ -18,6 +18,8 @@ namespace ObjetosPerdidosUCB.Infrastructure.Repositories
         {
             return await _context.Reclamos
                 .AsNoTracking()
+                .Include(r => r.IdObjetoNavigation)
+                .Include(r => r.IdUsuarioNavigation)
                 .OrderByDescending(r => r.FechaEmitida)
                 .ToListAsync();
         }

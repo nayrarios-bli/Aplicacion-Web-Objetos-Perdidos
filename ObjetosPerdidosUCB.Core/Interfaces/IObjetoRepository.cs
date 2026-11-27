@@ -10,5 +10,6 @@ namespace ObjetosPerdidosUCB.Core.Interfaces
         Task<IEnumerable<Objeto>> GetObjetosByNombreAsync(string texto);
         Task<Objeto?> GetObjetoParaActualizarAsync(uint id);
         Task UpdateObjetoAsync(Objeto objeto);
+        Task<IEnumerable<Objeto>> GetObjetosParaFiltrarAsync();
     }
 }

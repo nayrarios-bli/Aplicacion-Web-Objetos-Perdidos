@@ -132,7 +132,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 await _objetoService.InsertObjeto(objeto);
 
                 // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
-                var guardado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
+                var guardado = await _objetoService.GetDetalleAsync(objeto.Id);
                 var resultDto = _mapper.Map<ObjetoDto>(guardado);
 
                 return CreatedAtAction(
@@ -180,7 +180,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 await _objetoService.UpdateObjeto(objeto);
 
                 // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
-                var actualizado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
+                var actualizado = await _objetoService.GetDetalleAsync(objeto.Id);
                 var resultDto = _mapper.Map<ObjetoDto>(actualizado);
 
                 return Ok(new ApiResponse<ObjetoDto>(resultDto, "Objeto actualizado correctamente."));
@@ -203,7 +203,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 if (id <= 0)
                     return BadRequest(new { message = "El ID debe ser mayor que cero." });
 
-                var objeto = await _objetoService.GetObjetoByIdAsync(id);
+                var objeto = await _objetoService.GetDetalleAsync(id);
                 if (objeto == null)
                     return NotFound(new { message = "Post no encontrado." });
 
