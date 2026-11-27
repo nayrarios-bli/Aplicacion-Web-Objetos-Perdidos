@@ -3,48 +3,116 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\securityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\securityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\objetoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\objetoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\securityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\securityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\reclamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\reclamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\reclamocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\reclamocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\objetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\objetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\dappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\reclamorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\reclamorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\iobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\iobjetorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\objetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\objetocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\reclamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\reclamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\objetoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\objetoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\queries\\objetoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\queries\\objetoquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\idappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\idappercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\idbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\idbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\dbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\dbconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\enums\\roletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\usuarios\\crearusuariodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\validators\\usuarios\\crearusuariodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\interface\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\interface\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\securityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\securityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\service\\securityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\service\\securityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\entities\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\entities\\security.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\queryfilters\\reclamoqueryfilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,28 +127,8 @@
       "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\queryfilters\\objetoqueryfilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\interface\\iobjetoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|solutionrelative:objetosperdidosucb.services\\interface\\iobjetoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\controllers\\response\\securitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\controllers\\response\\securitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02F94053-378E-4E84-A693-2F874AC20982}|ObjetosPerdidosUCB.Api\\ObjetosPerdidosUCB.Api.csproj|solutionrelative:objetosperdidosucb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\dtos\\securitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.infrastructure\\data\\objetosperdidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC9FFFA6-2B2E-4990-9970-F6CDA8B72AC9}|ObjetosPerdidosUCB.Infrastructure\\ObjetosPerdidosUCB.Infrastructure.csproj|solutionrelative:objetosperdidosucb.infrastructure\\data\\objetosperdidoscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9BFDD04-D368-4C26-9A88-07D7F15EA358}|ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj|solutionrelative:objetosperdidosucb.core\\dtos\\objetodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CB1A971-4C15-481A-A6E2-7005F7CF48EC}|ObjetosPerdidosUCB.Services\\ObjetosPerdidosUCB.Services.csproj|c:\\users\\lenovo\\source\\repos\\aplicacion-web-objetos-perdidos\\objetosperdidosucb.services\\validators\\objetos\\crearobjetodtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -127,19 +171,305 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SecurityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ReclamoService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAmwHcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-27T15:28:08.467Z",
+              "WhenOpened": "2026-11-23T14:07:04.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DapperContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\DapperContext.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\DapperContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\DapperContext.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Data\\DapperContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T16:25:27.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReclamoController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAEkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T14:02:25.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReclamoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ReclamoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ReclamoRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ReclamoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ReclamoRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T17:33:30.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IObjetoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IObjetoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T17:19:19.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ObjetoController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAANUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T18:35:21.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ObjetoService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAFwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T21:07:57.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-20T21:01:13.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-20T21:00:46.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ObjetoQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Queries\\ObjetoQuery.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Queries\\ObjetoQuery.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Queries\\ObjetoQuery.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Queries\\ObjetoQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T16:30:57.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ObjetoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T23:15:22.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IDbConnectionFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDbConnectionFactory.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IDbConnectionFactory.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDbConnectionFactory.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IDbConnectionFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T16:27:05.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DbConnectionFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\DbConnectionFactory.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\DbConnectionFactory.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\DbConnectionFactory.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\DbConnectionFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T16:28:15.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IDapperContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDapperContext.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IDapperContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IDapperContext.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IDapperContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T16:24:43.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAC0AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-20T20:56:54.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T15:00:31.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\appsettings.json",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-27T16:00:34.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RoleType.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Enums\\RoleType.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Enums\\RoleType.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Enums\\RoleType.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Enums\\RoleType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T15:54:44.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CrearUsuarioDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Usuarios\\CrearUsuarioDtoValidator.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Usuarios\\CrearUsuarioDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Usuarios\\CrearUsuarioDtoValidator.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Validators\\Usuarios\\CrearUsuarioDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T15:52:40.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Interface\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Interface\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Interface\\IUsuarioService.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Interface\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T15:50:35.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IUsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T15:51:10.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-27T15:31:52.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T13:31:44.158Z",
               "EditorCaption": ""
             },
             {
@@ -168,46 +498,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 22,
               "Title": "TokenController.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\TokenController.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\TokenController.cs",
               "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\TokenController.cs",
               "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\TokenController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAACkAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-20T20:25:07.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Service\\UsuarioService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAD8AAAApAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "UserLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\UserLogin.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\UserLogin.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\UserLogin.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\UserLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T15:00:31.031Z",
+              "WhenOpened": "2026-11-27T15:32:44.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ObjetoService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Service\\ObjetoService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADwAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "SecurityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
+              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
+              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\SecurityRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T21:07:57.876Z",
+              "WhenOpened": "2026-11-27T15:28:08.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 26,
               "Title": "SecurityService.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\SecurityService.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\SecurityService.cs",
@@ -220,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 27,
               "Title": "Security.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Security.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Security.cs",
@@ -233,70 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Entities\\Usuario.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T13:31:44.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReclamoController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\ReclamoController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T14:02:25.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ObjetoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\ObjetoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-27T15:04:12.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ObjetoController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\ObjetoController.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAAJgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T18:35:21.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ReclamoService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Service\\ReclamoService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAAB8AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-23T14:07:04.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 29,
               "Title": "Objeto.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Entities\\Objeto.cs",
@@ -308,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 30,
               "Title": "ObjetoQueryFilters.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\QueryFilters\\ObjetoQueryFilters.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\QueryFilters\\ObjetoQueryFilters.cs",
@@ -320,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 28,
               "Title": "ReclamoQueryFilters.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\QueryFilters\\ReclamoQueryFilters.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\QueryFilters\\ReclamoQueryFilters.cs",
@@ -332,31 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IObjetoService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Interface\\IObjetoService.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Interface\\IObjetoService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Interface\\IObjetoService.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Services\\Interface\\IObjetoService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T22:01:15.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "TestController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\TestController.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\TestController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\TestController.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Controllers\\TestController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T22:16:38.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "SecurityDto.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\SecurityDto.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\SecurityDto.cs",
@@ -368,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 31,
               "Title": "SecurityController.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Controllers\\Response\\SecurityController.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Controllers\\Response\\SecurityController.cs",
@@ -380,43 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Api\\Program.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Api\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T20:56:54.416Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T21:00:46.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\UnitOfWork.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAC0AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T21:01:13.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "ObjetoProfile.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Mappings\\ObjetoProfile.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Mappings\\ObjetoProfile.cs",
@@ -428,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Repositories\\BaseRepository.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Repositories\\BaseRepository.cs",
@@ -440,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
               "Title": "ObjetosPerdidosContext.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetosPerdidosContext.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Infrastructure\\Data\\ObjetosPerdidosContext.cs",
@@ -452,19 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ObjetoDto.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "RelativeToolTip": "ObjetosPerdidosUCB.Core\\DTOs\\ObjetoDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T23:15:22.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "CrearObjetoDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Services\\Validators\\Objetos\\CrearObjetoDtoValidator.cs",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Services\\Validators\\Objetos\\CrearObjetoDtoValidator.cs",
@@ -476,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 37,
               "Title": "ObjetosPerdidosUCB.Core.csproj",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Aplicacion-Web-Objetos-Perdidos\\ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj",
               "RelativeDocumentMoniker": "ObjetosPerdidosUCB.Core\\ObjetosPerdidosUCB.Core.csproj",
@@ -488,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 38,
               "Title": "ActualizarReclamoDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ObjetosPerdidosUCB\\ObjetosPerdidosUCB.Services\\Validators\\Reclamo\\ActualizarReclamoDtoValidator.cs",
               "RelativeDocumentMoniker": "..\\ObjetosPerdidosUCB\\ObjetosPerdidosUCB.Services\\Validators\\Reclamo\\ActualizarReclamoDtoValidator.cs",
@@ -499,7 +694,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 39,
               "Title": "CrearReclamoDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ObjetosPerdidosUCB\\ObjetosPerdidosUCB.Services\\Validators\\Reclamo\\CrearReclamoDtoValidator.cs",
               "RelativeDocumentMoniker": "..\\ObjetosPerdidosUCB\\ObjetosPerdidosUCB.Services\\Validators\\Reclamo\\CrearReclamoDtoValidator.cs",
@@ -511,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 40,
               "Title": "ReclamoDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ObjetosPerdidosUCB\\ObjetosPerdidosUCB.Services\\Validators\\Reclamo\\ReclamoDtoValidator.cs",
               "RelativeDocumentMoniker": "..\\ObjetosPerdidosUCB\\ObjetosPerdidosUCB.Services\\Validators\\Reclamo\\ReclamoDtoValidator.cs",

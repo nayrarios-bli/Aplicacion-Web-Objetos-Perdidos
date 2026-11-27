@@ -28,6 +28,7 @@ namespace ObjetosPerdidosUCB.Services.Service
 
         public async Task<IEnumerable<Reclamo>> GetAllReclamosAsync(ReclamoQueryFilters? filters)
         {
+            filters ??= new ReclamoQueryFilters();
             IEnumerable<Reclamo> reclamos;
             reclamos = await _unitOfWork.ReclamoRepository.GetAllReclamosAsync();
 
@@ -113,15 +114,17 @@ namespace ObjetosPerdidosUCB.Services.Service
                 throw new BusinessException(
                     "El administrador debe verificar que el reclamante es el propietario antes de entregar el objeto.");
 
-            var objeto = await _objetoService.GetDetalleAsync(reclamo.IdObjeto);
+            var objeto = await _unitOfWork.ObjetoRepository
+                   .GetObjetoParaActualizarAsync(reclamo.IdObjeto);
+
             if (objeto == null)
-                throw new BusinessException("El objeto no existe o ya no está disponible.", HttpStatusCode.NotFound);
+                throw new BusinessException(
+                    "El objeto no existe.",
+                    HttpStatusCode.NotFound);
 
             objeto.Estado = false;
-            await _objetoService.UpdateObjeto(objeto);
 
-            reclamo.Estado = "entregado";
-            await _unitOfWork.ReclamoRepository.Update(reclamo);
+            await _unitOfWork.ObjetoRepository.UpdateObjetoAsync(objeto);
         }
         public async Task DeleteReclamo(uint id)
         {

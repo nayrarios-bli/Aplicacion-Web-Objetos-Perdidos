@@ -71,7 +71,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                 if (usuario == null || !usuario.Estado)
                     return BadRequest(new { message = "El usuario no existe o está inactivo." });
 
-                var objeto = await _objetoService.GetObjetoByIdAsync(reclamoDto.IdObjeto);
+                var objeto = await _objetoService.GetDetalleAsync(reclamoDto.IdObjeto);
                 if (objeto == null)
                     return NotFound(new { message = "Objeto no encontrado." });
 
