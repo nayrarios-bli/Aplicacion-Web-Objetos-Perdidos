@@ -149,8 +149,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
         [HttpPut("dto/mapper/{id}")]
         public async Task<IActionResult> UpdateObjeto(
             uint id,
-            [FromBody] ActualizarObjetoDto objetoDto,
-            [FromQuery] uint idUsuarioAdmin)
+            [FromBody] ActualizarObjetoDto objetoDto)
         {
             if (id == 0)
                 return BadRequest(new { message = "El ID debe ser mayor que cero." });
@@ -177,7 +176,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
                     return BadRequest(new { message = "El lugar de almacenamiento no existe o está inactivo." });
 
                 var objeto = _mapper.Map<Objeto>(objetoDto);
-                await _objetoService.UpdateObjeto(objeto, idUsuarioAdmin);
+                await _objetoService.UpdateObjeto(objeto);
 
                 // Se vuelve a consultar para traer el nombre de la categoría y del lugar.
                 var actualizado = await _objetoService.GetObjetoByIdAsync(objeto.Id);
@@ -197,7 +196,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
         [Authorize(Roles = nameof(RoleType.Administrador))]
         [HttpDelete("dto/mapper/{id}")]
-            public async Task<IActionResult> DeletePostDtoMapper(uint id, [FromQuery] uint idUsuarioAdmin)
+            public async Task<IActionResult> DeletePostDtoMapper(uint id)
             {
                 // Validar que el ID sea válido
                 if (id <= 0)
@@ -209,7 +208,7 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 
                 try
                 {
-                    await _objetoService.DeleteObjeto(id, idUsuarioAdmin);
+                    await _objetoService.DeleteObjeto(id);
                     return NoContent(); // 204 sin contenido
                 }
                 catch (Exception ex)

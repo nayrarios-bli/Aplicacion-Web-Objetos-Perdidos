@@ -13,7 +13,7 @@ namespace ObjetosPerdidosUCB.Services.Interfaces
         Task<IEnumerable<Objeto>> GetAllObjetosByNombreAsync(ObjetoQueryFilters? filters);
         Task<bool> ExistsCodigoAsync(string codigo);
         Task InsertObjeto(Objeto objeto);
-        Task UpdateObjeto(Objeto objeto, uint idUsuarioAdmin);
-        Task DeleteObjeto(uint id, uint idUsuarioAdmin);
+        Task UpdateObjeto(Objeto objeto);
+        Task DeleteObjeto(uint id);
     }
 }

@@ -58,10 +58,5 @@ namespace ObjetosPerdidosUCB.Services.Interfaces
                     "Solo los administradores autorizados pueden realizar esta operación.",
                     HttpStatusCode.Forbidden);
         }
-
-        public async Task<Usuario> GetLoginByCredentials(UserLogin userLogin)
-        {
-            return await _unitOfWork.UsuarioRepository.GetLoginByCredentials(userLogin);
-        }
     }
 }

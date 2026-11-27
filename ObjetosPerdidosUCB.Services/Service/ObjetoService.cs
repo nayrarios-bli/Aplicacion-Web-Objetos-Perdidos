@@ -20,9 +20,15 @@ namespace ObjetosPerdidosUCB.Services.Service
         public readonly IUnitOfWork _unitOfWork;
 
 
-        public ObjetoService(IUnitOfWork unitOfWork)
+        public ObjetoService(IUnitOfWork unitOfWork,
+            IUsuarioService usuarioService,
+            ICategoriaService categoriaService,
+            ILugarAlmacenamientoService lugarService)
         {
             _unitOfWork = unitOfWork;
+            _usuarioService = usuarioService;
+            _categoriaService = categoriaService;
+            _lugarService = lugarService;
         }
 
         public async Task<IEnumerable<Objeto>> GetAllObjetosAsync()
@@ -57,7 +63,7 @@ namespace ObjetosPerdidosUCB.Services.Service
             objeto.Estado = true;
             await _unitOfWork.ObjetoRepository.Add(objeto);
         }
-        public async Task UpdateObjeto(Objeto objeto, uint idUsuarioAdmin)
+        public async Task UpdateObjeto(Objeto objeto)
         {
             //ya no necesitamos validar el usuario manualmente
             //await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
@@ -95,9 +101,9 @@ namespace ObjetosPerdidosUCB.Services.Service
 
             await _unitOfWork.ObjetoRepository.UpdateObjetoAsync(existente);
         }
-        public async Task DeleteObjeto(uint id, uint idUsuarioAdmin)
+        public async Task DeleteObjeto(uint id)
         {
-            await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
+            //await _usuarioService.ValidarAdministradorAsync(idUsuarioAdmin);
 
             var existente = await _unitOfWork.ObjetoRepository.GetObjetoByIdAsync(id);
             if (existente == null)

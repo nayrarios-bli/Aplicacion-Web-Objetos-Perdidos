@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using ObjetosPerdidosUCB.Core.Entities;
-using ObjetosPerdidosUCB.Services.Interface;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -11,69 +9,101 @@ namespace ObjetosPerdidosUCB.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TokenController : ControllerBase // conexion con appsetings (datos de bd y tokens)
+    public class TokenController : ControllerBase
     {
-            private readonly IConfiguration _configuration;
-            private readonly IUsuarioService _usuarioService;
+        private readonly IConfiguration _configuration;
+        private readonly IUsuarioService _usuarioService;
 
-            public TokenController(IConfiguration configuration,
-                IUsuarioService usuarioService)
-            {
-                _configuration = configuration;
-                _usuarioService = usuarioService;
-            }
+        public TokenController(
+            IConfiguration configuration,
+            IUsuarioService usuarioService)
+        {
+            _configuration = configuration;
+            _usuarioService = usuarioService;
+        }
 
-            [HttpPost]
-            public async Task<IActionResult> Authentication(UserLogin userLogin)
+        [HttpPost]
+        public async Task<IActionResult> Authentication([FromBody] UserLogin userLogin)
+        {
+            if (string.IsNullOrWhiteSpace(userLogin.User) ||
+                string.IsNullOrWhiteSpace(userLogin.Password))
             {
-                //Si es un usuario válido
-                var validation = await IsValidUser(userLogin);
-                if (validation.Item1)
+                return BadRequest(new
                 {
-                    var token = GenerateToken(validation.Item2);
-                    return Ok(new { token });
-                }
-
-                return Unauthorized();
+                    message = "El correo y la contraseña son obligatorios."
+                });
             }
 
-            private async Task<(bool, Security)> IsValidUser(UserLogin login)
-            {
-                var user = await _usuarioService.GetLoginByCredentials(login);
-                return (user != null, user);
-            }
+            // El campo User recibe el correo electrónico.
+            var usuario = await _usuarioService
+                .GetUsuarioByCorreoAsync(userLogin.User.Trim());
 
-            private string GenerateToken(Security security)
+            if (usuario == null ||
+                !usuario.Estado ||
+                !BCrypt.Net.BCrypt.Verify(
+                    userLogin.Password,
+                    usuario.Contrasena))
             {
-                //Header
-                var symmetricSecurityKey =
-                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Authentication:SecretKey"]));
-                var signingCredentials =
-                    new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
-                var header = new JwtHeader(signingCredentials);
-
-                //Claims (Cuerpo)
-                var claims = new[]
+                return Unauthorized(new
                 {
-            new Claim("Login", security.Login),
-            new Claim("Name", security.Name),
-            new Claim(ClaimTypes.Role, security.Role.ToString()),
-        };
-
-                //Payload
-                var payload = new JwtPayload(
-                    issuer: _configuration["Authentication:Issuer"],
-                    audience: _configuration["Authentication:Audience"],
-                    claims: claims,
-                    notBefore: DateTime.UtcNow,
-                    expires: DateTime.UtcNow.AddMinutes(2)
-                );
-
-                //Generar el token JWT
-                var token = new JwtSecurityToken(header, payload);
-
-                //Serializar el token
-                return new JwtSecurityTokenHandler().WriteToken(token);
+                    message = "Credenciales inválidas."
+                });
             }
+
+            var token = GenerateToken(usuario);
+            return Ok(new { token });
+        }
+
+        private string GenerateToken(Usuario usuario)
+        {
+            var secretKey = _configuration["Authentication:SecretKey"];
+            var issuer = _configuration["Authentication:Issuer"];
+            var audience = _configuration["Authentication:Audience"];
+
+            if (string.IsNullOrWhiteSpace(secretKey) ||
+                string.IsNullOrWhiteSpace(issuer) ||
+                string.IsNullOrWhiteSpace(audience))
+            {
+                throw new InvalidOperationException(
+                    "Falta configurar la clave, el emisor o la audiencia del token.");
+            }
+
+            var key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(secretKey));
+
+            var credentials = new SigningCredentials(
+                key,
+                SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+                new Claim(
+                    ClaimTypes.NameIdentifier,
+                    usuario.Id.ToString()),
+
+                new Claim(
+                    ClaimTypes.Name,
+                    usuario.Nombre),
+
+                new Claim(
+                    ClaimTypes.Email,
+                    usuario.CorreoElectronico),
+
+                new Claim(
+                    ClaimTypes.Role,
+                    usuario.Rol)
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                notBefore: DateTime.UtcNow,
+                expires: DateTime.UtcNow.AddMinutes(2),
+                signingCredentials: credentials);
+
+            return new JwtSecurityTokenHandler()
+                .WriteToken(token);
         }
     }
+}
